@@ -6,7 +6,7 @@
   <link href="https://a-little-sweet.github.io/atom.xml" rel="self"/>
   
   <link href="https://a-little-sweet.github.io/"/>
-  <updated>2022-11-22T13:30:29.998Z</updated>
+  <updated>2022-11-22T14:42:04.735Z</updated>
   <id>https://a-little-sweet.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>随机动漫Api</title>
+    <link href="https://a-little-sweet.github.io/posts/d3d28240.html"/>
+    <id>https://a-little-sweet.github.io/posts/d3d28240.html</id>
+    <published>2022-11-22T14:13:37.000Z</published>
+    <updated>2022-11-22T14:42:04.735Z</updated>
+    
+    <content type="html"><![CDATA[<div class="tip home"><p>动漫API</p></div><p><p><br> <a href="https://img.xjh.me/random_img.php?type=bg&amp;return=302">https://img.xjh.me/random_img.php?type=bg&amp;return=302</a></p><p><p><br><a href="https://air.moe/ranimg/api.php">https://air.moe/ranimg/api.php</a></p><p><p><br><a href="https://imgapi.xl0408.top/index.php">https://imgapi.xl0408.top/index.php</a></p><p><p><br><a href="https://www.dmoe.cc/random.php">https://www.dmoe.cc/random.php</a></p><p><p><br><a href="https://api.hanximeng.com/ranimg/api.php">https://api.hanximeng.com/ranimg/api.php</a></p><p><p><br><a href="https://api.btstu.cn/sjbz/?lx=dongman">https://api.btstu.cn/sjbz/?lx=dongman</a></p><p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;tip home&quot;&gt;&lt;p&gt;动漫API&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;p&gt;&lt;br&gt; &lt;a href=&quot;https://img.xjh.me/random_img.php?type=bg&amp;amp;return=302&quot;&gt;https://img.xjh.me/r</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>for循环</title>
@@ -438,29 +460,6 @@
     <summary type="html">&lt;h2 id=&quot;一-接口概念&quot;&gt;&lt;a href=&quot;#一-接口概念&quot; class=&quot;headerlink&quot; title=&quot;一.接口概念&quot;&gt;&lt;/a&gt;一.接口概念&lt;/h2&gt;&lt;p&gt;1.什么是接口(API)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;接口:&lt;font color=&#39;cornf</summary>
-      
-    
-    
-    
-    
-    <category term="Java" scheme="https://a-little-sweet.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>键盘输入调用</title>
-    <link href="https://a-little-sweet.github.io/posts/0.html"/>
-    <id>https://a-little-sweet.github.io/posts/0.html</id>
-    <published>2022-11-11T22:41:36.016Z</published>
-    <updated>2022-11-22T13:43:59.243Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="键盘输入调用"><a href="#键盘输入调用" class="headerlink" title="键盘输入调用"></a>键盘输入调用</h3><p>在编程中，需要接收用户输入的数据，就是可以使用键盘输入语句来获取</p><p>input.java 中需要一个扫描器（对象）Scanner</p><p>引入Scanner类步骤：</p><ol><li>导入该类所在的包，Java.util.*</li><li>创建该类对象（声明变量）</li><li>调用里面的功能</li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span>  java .util.Scanner; <span class="comment">// 表示把java.util 包下的Scanner类导入</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span>  <span class="title class_">text</span> &#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String [] args )</span> &#123;</span><br><span class="line"></span><br><span class="line"><span class="type">Scanner</span>  <span class="variable">myScanner</span> <span class="operator">=</span>  <span class="keyword">new</span> <span class="title class_">Scanner</span> (System.in);<span class="comment">//创建一个对象名为 myScanner</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">&quot;请输入名字&quot;</span>) ;</span><br><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> myScanner.next();<span class="comment">//接收用户输入字符串</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">&quot;请输入年龄&quot;</span>) ;</span><br><span class="line"><span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> myScanner.nextInt(); <span class="comment">//接收用户输入的的整型数值</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">&quot;请输入薪水&quot;</span>) ;</span><br><span class="line"><span class="type">doubel</span>  <span class="variable">sal</span> <span class="operator">=</span>  myScanner.nextDoubel();<span class="comment">//接收用户输入的双精度类型</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;键盘输入调用&quot;&gt;&lt;a href=&quot;#键盘输入调用&quot; class=&quot;headerlink&quot; title=&quot;键盘输入调用&quot;&gt;&lt;/a&gt;键盘输入调用&lt;/h3&gt;&lt;p&gt;在编程中，需要接收用户输入的数据，就是可以使用键盘输入语句来获取&lt;/p&gt;
-&lt;p&gt;input.java 中需要</summary>
       
     
     
