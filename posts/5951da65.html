@@ -1,0 +1,564 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>接口 | 奈落のBlog</title><meta name="author" content="saber"><meta name="copyright" content="saber"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一.接口概念1.什么是接口(API)  接口:接口是为了提供一种服务所有的接口统称为API,接口分为内部接口和外部接口 外部接口:测试被测系统和外部系统之间的接口 测试内部接口:1.内部接口提供内部系统使用:开发人员自己开发的对自身系统提供的接口)2.内部接口提供外部系统使用:正例,各种异常场景,权限控制(只需要测试正例即可),开发系统调用外部的其他的接口  2.软件为什么需要接口  接口可以使外">
+<meta property="og:type" content="article">
+<meta property="og:title" content="接口">
+<meta property="og:url" content="https://a-little-sweet.github.io/posts/5951da65.html">
+<meta property="og:site_name" content="奈落のBlog">
+<meta property="og:description" content="一.接口概念1.什么是接口(API)  接口:接口是为了提供一种服务所有的接口统称为API,接口分为内部接口和外部接口 外部接口:测试被测系统和外部系统之间的接口 测试内部接口:1.内部接口提供内部系统使用:开发人员自己开发的对自身系统提供的接口)2.内部接口提供外部系统使用:正例,各种异常场景,权限控制(只需要测试正例即可),开发系统调用外部的其他的接口  2.软件为什么需要接口  接口可以使外">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://imgapi.xl0408.top/index.php">
+<meta property="article:published_time" content="2022-11-11T22:41:36.022Z">
+<meta property="article:modified_time" content="2022-11-22T15:00:44.669Z">
+<meta property="article:author" content="saber">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imgapi.xl0408.top/index.php"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://a-little-sweet.github.io/posts/5951da65"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><meta name="msapplication-TileColor" content="#3b70fc"/><link rel="apple-touch-icon" sizes="180x180" href="/img/siteicon/128.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/siteicon/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/siteicon/16.png"/><link rel="mask-icon" href="/img/siteicon/128.png" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '接口',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-22 23:00:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/css/runtime/runtime.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="奈落のBlog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://imgapi.xl0408.top/index.php')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">奈落のBlog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">接口</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-11T22:41:36.022Z" title="发表于 2022-11-12 06:41:36">2022-11-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-22T15:00:44.669Z" title="更新于 2022-11-22 23:00:44">2022-11-22</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="接口"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一-接口概念"><a href="#一-接口概念" class="headerlink" title="一.接口概念"></a>一.接口概念</h2><p>1.什么是接口(API)</p>
+<blockquote>
+<p>接口:<font color='cornflowerblue'>接口是为了提供一种服务</font><br>所有的接口统称为API,接口分为<strong>内部接口</strong>和<strong>外部接口</strong></p>
+<p>外部接口:测试被测系统和外部系统之间的接口</p>
+<p>测试内部接口:<br>1.内部接口提供内部系统使用:开发人员自己开发的对自身系统提供的接口)<br>2.内部接口提供外部系统使用:正例,各种异常场景,权限控制(只需要测试正例即可),开发系统调用外部的其他的接口</p>
+</blockquote>
+<p>2.软件为什么需要接口</p>
+<blockquote>
+<p>接口可以<font color='cornflowerblue'>使外部来修改内部的数据</font></p>
+</blockquote>
+<p>3.怎么做接口测试</p>
+<blockquote>
+<p>一般项目的前后端进度不同,则需要提前将开发出的接口进行测试<br>基于安全考虑,前端的验证很容易绕过,直接请求接口,特别是:身份证信息,银行卡,金钱交易<br>接口的本质:<strong>就是测试接口是否能正常的交互,权限控制及异常场景</strong></p>
+</blockquote>
+<h2 id="二-接口测试的流程"><a href="#二-接口测试的流程" class="headerlink" title="二.接口测试的流程"></a>二.接口测试的流程</h2><ol>
+<li><p>从开发那拿到Api接口(期望不要太大)/用Friider去抓包接口,熟悉接口业务,鉴权码</p>
+</li>
+<li><p>接口计划和方案</p>
+<p>思路:</p>
+<p>​    a.正例:输入正常的入参,查看接口是否返回成功</p>
+<p>​    b.反例</p>
+<p>​                I.鉴权返例: 鉴权为空,鉴权码错误,鉴权码已过期..</p>
+<p>​                II.参数反例: 参数为空,参数类型异常,参数长度异常</p>
+<p>​                III.其他场景:错误码的覆盖,分页异常,接口调用次数限制</p>
+<p>​            </p>
+<p>3.使用接口测试工具postman编写用例和评审</p>
+<p>4.使用postman+Newman+jenkins实现持续集成,并且输出测试报告并且发送邮件  </p>
+</li>
+</ol>
+<h2 id="三-接口协议"><a href="#三-接口协议" class="headerlink" title="三.接口协议"></a>三.接口协议</h2><p> 1.webservice协议</p>
+<blockquote>
+<p>接口地址:<code>http:// ....... ?wsdl</code><br>restful规则:get获取数据,post提交数据,put修改数据,delect删除数据<br>以前对数据的增删改查都是由四个地址进行操作.<br><code>http://192.168.25.2:8080/adduser</code><br><code>http://192.168.25.2:8080/delectuser</code><br><code>http://192.168.25.2:8080/putuser</code><br><code>http://192.168.25.2:8080/postuser</code><br>而现在只用一个网址<code>http://192.168.25.2:8080/user</code>使用get,post,put,delect请求来进行增删改查</p>
+</blockquote>
+<p> 2.dubbo协议</p>
+<blockquote>
+<p>接口地址<code>dubbo://</code><br>适用于少量数据的传输,大并发</p>
+</blockquote>
+<p> 3.http协议</p>
+<p>超文本传输协议(HTTP):一种无状态的,以请求/应答方式运行的协议,它使用可拓展的语义和自描述消息格式.</p>
+<p><code>http协议</code>: 接口地址<code>http://  80</code>,端口是80,<code>https=http+ssl</code>安全传输协议,端口是443</p>
+<p>响应:1XX响应的信息,2XX响应成功,3XX重定向,4XX客户端错误(不传值跳转网页),5XX服务器错误</p>
+<h2 id="须知"><a href="#须知" class="headerlink" title="须知"></a>须知</h2><h3 id="1丶-接口返回的数据格式"><a href="#1丶-接口返回的数据格式" class="headerlink" title="1丶 接口返回的数据格式"></a>1丶 接口返回的数据格式</h3><ol>
+<li>json格式(主流)</li>
+</ol>
+<blockquote>
+<p><strong>Json是一种轻量级的数据交换格式。</strong>它基于JAVAScript的一个子集,采用完全独立于编程语言的文本格式来<strong>存储和表示数据。</strong> 在js语言中，一切都是对象，因此任何支持的类型都可以通过json来表示</p>
+<p>json由<strong>两种特殊类型(数组,对象)</strong>和<strong>四种基本类型(string.int,boolean、NULL值)</strong>构成v</p>
+<p><strong>数组</strong>它也可以像对象那样使用键值对，但还是索引使用得多。值的类型可以是任意类型。举例：{“firstName”: “Brett”, “lastName”: “McLaughlin”}。</p>
+<p><strong>对象</strong>键名可以使用整数和字符串来表示。值的类型可以是任意类型。举例：people:[{“firstName”: “Brett”,”lastName”:”McLaughlin”},{“firstName”:”Jason”,”lastName”:”Hunter”}]</p>
+</blockquote>
+<p>优点</p>
+<blockquote>
+<ul>
+<li>简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。</li>
+<li>易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率</li>
+</ul>
+</blockquote>
+<p>b. json由两种数据结构组成(可以相互嵌套),MAP对象,键值对,{key:value,key:value}和 数组:[value1,value2,value3]<br>c. 在线校验json结构的网站 <code>http://www.bejson.com</code></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">格式:   &#123;error_code:0,msg:&quot;提现成功&quot;,data:[]&#125;</span><br><span class="line"></span><br><span class="line">error_code(自定义名字):错误码,0代表成功</span><br><span class="line">msg:对错误码的中文说明</span><br><span class="line">data:真正返回的数据</span><br></pre></td></tr></table></figure>
+<p> 2.html格式</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;error_code&gt;0&lt;/error_code&gt;</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>3.xml格式</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml?version=&quot;1.0&quot; encoding=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;error_code&gt;0&lt;/error_code&gt;</span><br><span class="line">...........</span><br><span class="line">&lt;/xml&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2丶-头字段"><a href="#2丶-头字段" class="headerlink" title="2丶 头字段"></a>2丶 头字段</h3><font color='orange'>HTTP头字段</font>是`key-value`的形式,key和value之间用":"分隔,最后用`crlf`换行表示字段结束.
+
+前后端分离则将传输数据类型为` Content-type: application/json`,这里的key就是`Content-kype`.value值就是`application/json`
+
+
+
+<font color='orange'>头字段规则 </font>
+
+<ul>
+<li>字段名不区分大小写,字段名里不允许出现空格,可以使用连字符<code>-</code>,但不能使用下划线<code>_</code>(有的浏览器不能解析下划线)</li>
+<li>字段名后面紧跟<code>:</code>字段原则上不能重复.除非<code>set-cookie</code></li>
+</ul>
+<font color='orange'>常用头字段</font>
+
+<p>http协议中有很多头字段</p>
+<p>请求字段:请求头中的头字段,如<code>Host,Referer</code></p>
+<p>响应字段:响应头中的头字段,如<code>server,Date</code></p>
+<p>通用字段:在请求头和响应头都可以出现,如<code>Content-type,connection</code></p>
+<h3 id="3丶请求报文"><a href="#3丶请求报文" class="headerlink" title="3丶请求报文"></a>3丶请求报文</h3><p>HTTP协议的请求报文由四大部分组成</p>
+<ul>
+<li><p>请求行:描述请求或响应的基本信息<code>GET /index.html HTTP/1.1</code> <code>HTTP/1.1 200 ok</code></p>
+</li>
+<li><p>请求头:使用Key-value形式更详细的说明报文<code>Connection: keep-alive</code></p>
+</li>
+<li><p>空格</p>
+</li>
+<li><p>消息正文:实际传输的数据,它不一定是纯文本,可以是图片,视频,二进制数据</p>
+<p><code>&lt;html&gt;语句&lt;/html&gt;</code></p>
+</li>
+</ul>
+<p>  <font color='orange'>请求头报文格式</font>:   <code>method 空格 url version 换行</code></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">method(请求方法):如`get/head/put/post`,表示对资源的操作</span><br><span class="line">URL(请求目标):通常是一个URl,标记了请求方法要操作的资源</span><br><span class="line">version(版本号):表示报文使用的HTTP协议版本</span><br></pre></td></tr></table></figure>
+<h3 id="4丶响应报文"><a href="#4丶响应报文" class="headerlink" title="4丶响应报文"></a>4丶响应报文</h3><p>HTTP协议的响应报文由四大部分组成</p>
+<ul>
+<li><p>响应行:描述请求或响应的基本信息<code>GET /index.html HTTP/1.1</code> <code>HTTP/1.1 200 ok</code></p>
+</li>
+<li><p>响应头:使用Key-value形式更详细的说明报文<code>Connection: keep-alive</code></p>
+</li>
+<li><p>空格</p>
+</li>
+<li><p>消息正文:实际传输的数据,它不一定是纯文本,可以是图片,视频,二进制数据</p>
+<p><code>&lt;html&gt;语句&lt;/html&gt;</code></p>
+</li>
+</ul>
+<p>  <font color='orange'>响应行报文格式</font>:　<code>version 空格 statuscode 空格 reason 换行</code></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">version(版本号):表示报文使用的HTTP协议</span><br><span class="line">statuscode(版本状态码):三位数字,表示处理的结果</span><br></pre></td></tr></table></figure>
+<h3 id="5丶HTTP的-Post编码格式"><a href="#5丶HTTP的-Post编码格式" class="headerlink" title="5丶HTTP的 Post编码格式"></a>5丶HTTP的 Post编码格式</h3><blockquote>
+<p>HTTP是以ASCll码来传输的,建立在TCP/IP协议上,HTTP请求/响应包括<strong>请求行,请求头,空格,消息正文</strong></p>
+<p><code>application/x-www-form-urlencoded; charset=UTF-8</code>而请求头的Content-Type属性告诉服务器,浏览器发送的消息正文是通过什么方式进行编码的,服务器就会得知用什么方式进行解析,而POST方法有四种编码格式</p>
+</blockquote>
+<ol>
+<li>application/x-www-form-urlencoded </li>
+</ol>
+<p>post请求的编码格式若不指定,就是这个,只能传key=value值</p>
+<ol>
+<li>multipart/form-data </li>
+</ol>
+<p>（键值对型数据）:通常是用在客户端向服务端传送大文件数据，如：图片或者文件。也可以传key=value</p>
+<ol>
+<li>application/json </li>
+</ol>
+<p>(Json 类型数据):用的超级多，也非常的方便。</p>
+<ol>
+<li>text/xml </li>
+</ol>
+<p>（xml）</p>
+<h3 id="6丶注意"><a href="#6丶注意" class="headerlink" title="6丶注意"></a>6丶注意</h3><ol>
+<li>JSON 格式支持比键值对复杂得多的结构化数据，而且还支持其他数据但是如果在这种格式下用到key—value形式，接收方就接收不到value,因为<strong>消息正文没有application/json形式的处理</strong>来源于<code>https://blog.csdn.net/do_finsh/article/details/72886000</code></li>
+</ol>
+<h3 id="7丶Tcp-IP-协议"><a href="#7丶Tcp-IP-协议" class="headerlink" title="7丶Tcp/IP   协议"></a>7丶Tcp/IP   协议</h3><p>一个HTTP请求流程</p>
+<blockquote>
+<p>输入网址回车后,浏览器会将域名解析出来,浏览器会去查看你的浏览器是否有该域名对应的DNS缓存,有的话,可以拿到服务端的地址,没有的话,会去看你本地的host文件是否配置,没有配置则发起DNS请求来获取你对应的服务器iP地址</p>
+<p>应用层会构造一个DNS请求报文,应用层会调用传输层的一个接口,调用UDP进行传输<br>网络层会将UDP请求报文添加一个IP的请求头,网络层会将其数据交给链路层</p>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/f81e4e4e3d6b41a98c9961a1050c6887.png" alt="请添加图片描述"></p>
+<blockquote>
+<p>应用层:DNS,HTTP,SSH,SMTP,FTP<br>传输控制层:Tcp协议,UDP协议<br>网络层:ipv4,ipv6,arp,icmp<br>数据链路层:以太网,无线LAN<br>物理层:光纤,双绞线电缆.无线设备<br>TCP协议 是面向<strong>连接的</strong> <strong>可靠的</strong>传输控制协议,TCP的三次握手和四次挥手</p>
+</blockquote>
+<h3 id="8-接口报文模版"><a href="#8-接口报文模版" class="headerlink" title="8,接口报文模版"></a>8,接口报文模版</h3><p>  将该接口链接的文档下载下来</p>
+<p>  <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img-blog.csdnimg.cn/c811a0cf7bff4ba0a2daff3dc89385f9.png" alt="请添加图片描述"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">请求部分</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//请求行</span><br><span class="line">POST https://event.csdn.net/logstores/csdn-pc-tracking-page-exposure/track HTTP/1.1</span><br><span class="line">// 请求方式是post,请求地址是https://event.csdn.net/logstores/csdn-pc-tracking-page-exposure/track,协议HTTP/1.1</span><br><span class="line"></span><br><span class="line">//请求头</span><br><span class="line">*Host: event.csdn.net//请求的主机地址</span><br><span class="line">*Connection: keep-alive(保持活跃) //连接方式</span><br><span class="line">*User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 //客户端的用户类型</span><br><span class="line">*Accept: */* //客户端接到的数据格式</span><br><span class="line">*Content-Type: text/plain;charset=UTF-8// 请求内容的格式</span><br><span class="line">*cookie:  eyJfX3NvdXJjZV9fIjoiY3NkbiIsIl9fbG9nc19fIjpbeyJjaWQiOiIxMF8zNTUwNjExOTU2MC0xNjAyMjA2ODMyNjMwLTQyMDgyMiIsInNpZCI6IjEwXzE2NTQ5MzcwMjQ2OTIuNDEyNDY3IiwicGlkIjoicGFzc3BvcnQiLCJ1aWQiOiIiLCJkaWQiOiIxMF8zNTUwNjExOTU2MC0xNjAyMjA2ODMyNjMwLTQyMDgyMiIsImRjX3NpZCI6ImE1NDRmMzYxYmVkZmVlOGNkZWQ1MzIzY2U0NGQ1YzdkIiwicmVmIjoiaHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3oyNzY4NTU3NzkyP3R5cGU9YmxvZyIsImN1cmwiOiJodHRwczovL3Bhc3Nwb3J0LmNzZG4ubmV0L2xvZ2luP2NvZGU9YXBwbGV0cyIsImRlc3QiOiIiLCJ1dG0iOiIiLCJzcG0iOiIxMDMxLjIzNTIuMzAwMS43NzY1IiwidCI6IjE2NTQ5MzczOTciLCJlbGVUb3AiOiIiLCJjQ29va2llIjoiY19kbF91bT0tO2NfZGxfcHJpZD0xNjU0ODI2NDgwMzUxXzk3OTYxNDtjX2RsX3JpZD0xNjU0ODI3NDIxMTE1XzkwMzUwODtjX2RsX2ZyZWY9aHR0cHM6Ly9iYnMuY3Nkbi5uZXQvdG9waWNzLzYwNjg3ODg0ODtjX2RsX2ZwYWdlPS9kb3dubG9hZC9zaW5hdF80MDU3Mjg3NS84NTU5NTA3MjtjX2ZpcnN0X3JlZj1kZWZhdWx0O2NfZmlyc3RfcGFnZT1odHRwcyUzQS8vd3d3LmNzZG4ubmV0LztjX3NlZ21lbnQ9NjtjX3NpZD1hNTQ0ZjM2MWJlZGZlZThjZGVkNTMyM2NlNDRkNWM3ZDtjX3Nlc3Npb25faWQ9MTBfMTY1NDkzNzAyNDY5Mi40MTI0Njc7Y19kc2lkPTExXzE2NTQ5MzcwMjUwMTYuMDg1NzEzO2NfcGFnZV9pZD1kZWZhdWx0O2NfcHJlZj1odHRwcyUzQS8vYmxvZy5jc2RuLm5ldC9tMnNmZmcyJTNGdHlwZSUzMiUzRnNwbSUzRDEwMDAuMjExNS4zMDAxLjUzNDM7Y19yZWY9aHR0cHMlM0EvL2Jsb2cuY3Nkbi5uZXQvbjM0NWRzZmZnMiUzRnR5cGUlM0RibG9nO2NfdG9zPXJkYjF2ODsiLCJfX3RpbWVfXyI6MTY1NDkzNzM5N31dLCJfX3RhZ3NfXyI6eyJ1c2VyYWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTAyLjAuNTAwNS42MyBTYWZhcmkvNTM3LjM2IiwicGxhdGZvcm0iOiJQQyIsImxvZ19pZCI6IjUyMTUifX0=</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Referer: https://passport.csdn.net/login?code=applets //请求来源的地址</span><br><span class="line">Content-Length: 1116 (发送给服务器内容的长度)</span><br><span class="line">sec-ch-ua: &quot; Not A;Brand&quot;;v=&quot;99&quot;, &quot;Chromium&quot;;v=&quot;102&quot;, &quot;Google Chrome&quot;;v=&quot;102&quot;</span><br><span class="line">x-log-apiversion: 0.6.0</span><br><span class="line">sec-ch-ua-mobile: ?0`</span><br><span class="line">user-Agent:   //客户端的用户类型</span><br><span class="line">Safari/537.36</span><br><span class="line">x-log-bodyrawsize: 1234</span><br><span class="line">sec-ch-ua-platform: &quot;Windows&quot;</span><br><span class="line">Origin: https://passport.csdn.net</span><br><span class="line">Sec-Fetch-Site: same-site</span><br><span class="line">Sec-Fetch-Mode: cors</span><br><span class="line">Sec-Fetch-Dest: empty</span><br><span class="line"></span><br><span class="line">Accept-Encoding: gzip, deflate, br(可接受的压缩方式)</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//空格部分</span><br><span class="line"></span><br><span class="line">//消息正文</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">响应部分</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//响应行</span><br><span class="line">HTTP/1.1 200 OK//协议 响应码 响应信息</span><br><span class="line"></span><br><span class="line">//响应头</span><br><span class="line">Server: Tengine //服务器的名称</span><br><span class="line">Content-Type: application/octet-stream//响应内容的类型</span><br><span class="line">Content-Length: 0</span><br><span class="line">Connection: keep-alive(保持活跃)</span><br><span class="line">Set-Cookie:Hm_lvt_866c9be12d4a814454792b1fd0fed295=1654732414,1654827627,1654910665,1655001979; Hm_lpvt_866c9be12d4a814454792b1fd0fed295=165502304(响应的cookie)</span><br><span class="line"></span><br><span class="line">Access-Control-Allow-Origin: *</span><br><span class="line">Access-Control-Expose-Headers: *</span><br><span class="line">Date: Sat, 11 Jun 2022 08:49:57 GMT//响应的时间</span><br><span class="line">x-log-time: 1654937397</span><br><span class="line">x-log-requestid: 62A45735C290A28A675D2C95</span><br><span class="line">Via: cache14.l2cm9-7[24,0], kunlun8.cn1497[53,0]</span><br><span class="line">Timing-Allow-Origin: *</span><br><span class="line">EagleId: 701ea2a616549373977903829e</span><br><span class="line"></span><br><span class="line">//空格</span><br><span class="line"></span><br><span class="line">//消息正文</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="五-postman工具"><a href="#五-postman工具" class="headerlink" title="五.postman工具"></a>五.postman工具</h2><blockquote>
+<p>构建请求</p>
+<ol>
+<li>请求方式</li>
+<li>url方式</li>
+<li>请求头的确认</li>
+<li>传参格式</li>
+<li>发送请求</li>
+</ol>
+</blockquote>
+<h3 id="1-功能栏"><a href="#1-功能栏" class="headerlink" title="1.功能栏"></a>1.功能栏</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\hhh\Desktop\postman主界面功能图.png" alt="postman主界面功能图"></p>
+<p>请求标题栏</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1. params:</span><br><span class="line">请求的参数</span><br><span class="line">2. Authorrization:鉴权方式</span><br><span class="line">3. headers:请求头</span><br><span class="line">4. 请求下的Body:入参格式</span><br><span class="line">  	 none:没有参数</span><br><span class="line">	 form-data:文件/键值对(key- value)</span><br><span class="line">	 x-www-form-urlencoded:键值对    </span><br><span class="line">     raw:Json格式(Text,javascript,json,html.xxml)</span><br><span class="line">    binary:传二进制文件</span><br><span class="line"></span><br><span class="line"> 5. pre-request-script:请求之前的脚本</span><br><span class="line"> 6. tests:请求之后断言的代码</span><br><span class="line"> 7. setting:设置 </span><br><span class="line"> 8. cookies:postman管理cookie信息</span><br></pre></td></tr></table></figure>
+<p>响应标题栏</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1. Body:接口返回的数据</span><br><span class="line"></span><br><span class="line">   		pretty:以json,html,xml..不同的格式查看返回的数据</span><br><span class="line"> 		     Raw:以文本格式方式查看返回的数据</span><br><span class="line">    		 preview:以网页的方式查看返回的数据</span><br><span class="line"></span><br><span class="line"> 2. cookie:响应的cookie信息</span><br><span class="line"> 3. headers:响应头 </span><br><span class="line"> 4. TestResults:断言结果 </span><br><span class="line"> 5. status:状态码 </span><br><span class="line"> 6. time:响应的时间</span><br><span class="line"> 7. szie:响应内容大小</span><br></pre></td></tr></table></figure>
+<h3 id="2-问题"><a href="#2-问题" class="headerlink" title="2.问题"></a>2.问题</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">多种环境:	开发环境,测试环境,生成环境</span><br><span class="line">接口关联:	需要手动关联</span><br><span class="line">参数需要手动修改</span><br></pre></td></tr></table></figure>
+<h3 id="3-postman环境-全局变量"><a href="#3-postman环境-全局变量" class="headerlink" title="3.postman环境/全局变量"></a>3.postman环境/全局变量</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\hhh\Desktop\postman环境变量图.png" alt="postman环境变量图"></p>
+<p>1.概念</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请求地址:<span class="attr">https</span>:<span class="comment">//&#123;&#123;ip&#125;&#125;/cgi-bin/token?grant_type=client_credential&amp;appid=wx6b11b3efd1cdc290&amp;secret=106a9c6157c4db5f6029918738f9529d</span></span><br><span class="line"></span><br><span class="line">此时的ip是环境变量,已经在envirronments中设过了</span><br><span class="line">而在请求地址上引用 环境变量 要用&#123;&#123;变量&#125;&#125;包起来</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>环境变量:环境变量就是全局变量</li>
+<li>全局变量:全局变量是能够在任何接口都可以访问的变量</li>
+</ol>
+</blockquote>
+<h3 id="4-postman内置动态函数"><a href="#4-postman内置动态函数" class="headerlink" title="4.postman内置动态函数"></a>4.postman内置动态函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">postman内置动态函数,在功能pre-request Script下设置</span><br><span class="line"></span><br><span class="line">&#123;&#123;$timestamp&#125;&#125;生成当前时间的时间戳</span><br><span class="line">&#123;&#123;$randomint&#125;&#125;生成0-100之间的随机数</span><br><span class="line">&#123;&#123;$guid&#125;&#125;生成速记GUID字符串</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">自定义动态参数</span><br><span class="line">设置全局变量,在通过body引用变量传参</span><br><span class="line"></span><br><span class="line">//手动获取时间戳</span><br><span class="line">var times = Date.now();</span><br><span class="line">//设置为全局变量</span><br><span class="line">pm.globals.set(&quot;times&quot;, times);</span><br><span class="line"></span><br><span class="line">使用时,&#123;&#123;times&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-解决接口关联问题"><a href="#5-解决接口关联问题" class="headerlink" title="5.解决接口关联问题"></a>5.解决接口关联问题</h3><h4 id="1-使用json提取器"><a href="#1-使用json提取器" class="headerlink" title="1.使用json提取器"></a>1.使用json提取器</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">若下一个接口需要上一个传参,在<span class="title class_">Tests</span>断言选项输入以下代码</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用json提取器提取access_token值</span></span><br><span class="line"><span class="comment">//打印返回报文</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(responseBody);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//因为JSON.parse()方法可以将字符串内容转换成对象形式,这样变量result就可以使用result.属性的方法了</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(responseBody)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result.<span class="property">access_token</span>);<span class="comment">//打印var的access_token属性</span></span><br><span class="line"></span><br><span class="line">pm.<span class="property">globals</span>.<span class="title function_">set</span>(<span class="string">&quot;access_token&quot;</span>, result.<span class="property">access_token</span>);<span class="comment">//把access_token设置全局变量</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="2-使用正则表达式提取器"><a href="#2-使用正则表达式提取器" class="headerlink" title="2.使用正则表达式提取器"></a>2.使用正则表达式提取器</h4><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\hhh\Desktop\正则表达式定全局变量.png" alt="正则表达式定全局变量"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">使用正则表达式提取器实现接口关联,<span class="title function_">match</span>()方法用于匹配内容</span><br><span class="line">在<span class="title class_">Tests</span>断言选项输入以下代码</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回报文主体 内容进行匹配字段是access_token, &quot; .*? &quot; 代替键值内容</span></span><br><span class="line"><span class="keyword">var</span> result = responseBody.<span class="title function_">match</span>(<span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">&#x27;&quot;access_token&quot;:&quot;(.*?)&quot;&#x27;</span>));<span class="comment">//new RegExp(),新建一个正则表达式</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result)<span class="comment">//发现打印的内容有点杂</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result[<span class="number">1</span>]);<span class="comment">//过滤后,发现打印的内容就是access_token值</span></span><br><span class="line"></span><br><span class="line">pm.<span class="property">globals</span>.<span class="title function_">set</span>(<span class="string">&quot;access_token&quot;</span>, result[<span class="number">1</span>]);<span class="comment">//再把access_token设置全局变量</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="6-postman的断言"><a href="#6-postman的断言" class="headerlink" title="6.postman的断言"></a>6.postman的断言</h3><blockquote>
+<p><strong>断言(Tests功能)可以判断出接口是否返回成功</strong></p>
+</blockquote>
+<h4 id="1-功能栏-1"><a href="#1-功能栏-1" class="headerlink" title="1.功能栏"></a>1.功能栏</h4><blockquote>
+<ol>
+<li>Get an environment variable 获得一个环境变量</li>
+<li>Get a golbal variable 获得一个全局变量</li>
+<li>get a variable 获得一个变量</li>
+<li>get a collection variable 获得一个集合变量</li>
+<li><p>set设置 , clear删除</p>
+</li>
+<li><p>sent a request 发送一个请求</p>
+</li>
+<li><p><strong>status code : Code is 200  检查返回的状态码是否是200</strong></p>
+</li>
+<li><p><strong>response body: Contains string 检查响应中包含指定字符串</strong></p>
+</li>
+<li><strong>response body: JSON value check 检查响应中包含json的值</strong></li>
+<li><strong>response body: is equal to a string 检查响应中等于一个字符串</strong> ,一般用于判断返回值少的字符串</li>
+<li><strong>response header : Content- type header check 检查是否包含某个响应头</strong>,一般就查看有没有content_type</li>
+<li><strong>response time is less than 200ms 检查请求耗时小于200ms</strong></li>
+<li>status code : Successful Post request</li>
+<li>status code : code name has string</li>
+<li>response body: convert xml body to a Json 将XML的返回值转换成一个json对象</li>
+</ol>
+</blockquote>
+<h4 id="2-断言的流程及注意"><a href="#2-断言的流程及注意" class="headerlink" title="2.断言的流程及注意"></a>2.断言的流程及注意</h4><blockquote>
+<p>断言分为 <strong>状态断言 </strong>和 <strong>业务断言</strong></p>
+<p>每一个接口测试时,都需要查看<strong>状态码和核心关键字</strong>,在<strong>功能Tests下</strong>输入相应代码块<br>可以通过<strong>Test Results功能</strong>查看</p>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\hhh\Desktop\断言功能.png" alt="断言功能"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//状态码(一个)</span><br><span class="line">pm.test(&quot;检查返回值状态码为200&quot;, function () &#123;</span><br><span class="line">    pm.response.to.have.status(200);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">//核心关键字(一般多个)</span><br><span class="line">pm.test(&quot;检查响应中是否包含access_token&quot;, function () &#123;</span><br><span class="line">    pm.expect(pm.response.text()).to.include(&quot;access_token&quot;);</span><br><span class="line">&#125;);</span><br><span class="line">pm.test(&quot;检查响应中是否包含日程&quot;, function () &#123;</span><br><span class="line"></span><br><span class="line">    //若是动态参数断言,只能是自定义的能断言</span><br><span class="line">    1.pm.expect(pm.response.text()).to.include(&quot;date&quot; +pm.globals.get(&quot;times&quot;));</span><br><span class="line">   2. pm.expect(pm.response.text()).to.include(&quot;date&quot; +globals[&quot;times&quot;]);</span><br><span class="line">   3. 2. pm.expect(pm.response.text()).to.include(&quot;date&quot; +globals.times);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>: 若是动态参数断言,只能是自定义的能断言</p>
+<p>在断言中获取自定义动态参数(全局变量)的方式:<br>            <strong>pm.globals.get(“times”)</strong><br>            <strong>globals[“times”]</strong><br>            <strong>globals.times</strong></p>
+<h4 id="3-设置全局断言"><a href="#3-设置全局断言" class="headerlink" title="3.设置全局断言"></a>3.设置全局断言</h4><blockquote>
+<p>因为每个接口都需要状态码断言,可以设置一个全局的,这样每个接口断言就不要写状态码断言了[在Edit选项设置全局Tests]</p>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\hhh\Desktop\全局断言设置.png" alt="全局断言设置"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Tests下输入</span><br><span class="line">pm.test(&quot;判断状态码是不是200&quot;, function () &#123;</span><br><span class="line">    pm.response.to.have.status(200);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="7-执行开始"><a href="#7-执行开始" class="headerlink" title="7.执行开始"></a>7.执行开始</h3><h4 id="1-运行所有接口-查看信息"><a href="#1-运行所有接口-查看信息" class="headerlink" title="1.运行所有接口,查看信息"></a>1.运行所有接口,查看信息</h4><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\hhh\Desktop\运行集合接口功能图.png" alt="运行集合接口功能图"></p>
+<h4 id="2-自动判断接口的参数结果"><a href="#2-自动判断接口的参数结果" class="headerlink" title="2. 自动判断接口的参数结果"></a>2. 自动判断接口的参数结果</h4><blockquote>
+<p>除了使用csv文件来判断,还有json文件也可以判断,不过两者过程一样,只是文件类型不同<br>而这里只介绍csv文件上传的过程</p>
+</blockquote>
+<p>a.第一步建立个csv文件,里面写入正例和反例及结果码的所有可能</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">grant_type,appid,secret,assert_value</span><br><span class="line">client_credential,wx6b11b3efd1cdc290,106a9c6157c4db5f6029918738f9529d,access_token</span><br><span class="line">,wx6b11b3efd1cdc290,106a9c6157c4db5f6029918738f9529d,40002</span><br><span class="line">client_credential,,106a9c6157c4db5f6029918738f9529d,41002</span><br><span class="line">client_credential,wx6b11b3efd1cdc290,,41004</span><br></pre></td></tr></table></figure>
+<p>b.第二步将请求的参数值都改称为其变量 </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\hhh\Desktop\更改变量值.png" alt="更改变量值"></p>
+<p>c.第三步 更该断言功能Tests里面的代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">原断言代码</span><br><span class="line"></span><br><span class="line">//因为JSON.parse()方法可以将字符串内容转换成对象形式,这样变量result就可以使用result.属性的方法</span><br><span class="line">var result = JSON.parse(responseBody)</span><br><span class="line">console.log(result.access_token);//打印var的access_token属性</span><br><span class="line">pm.globals.set(&quot;access_token&quot;, result.access_token);//把access_token设置全局变量</span><br><span class="line"></span><br><span class="line">pm.test(&quot;检查响应是否包含access_token值&quot;, function () &#123;</span><br><span class="line">    pm.expect(pm.response.text()).to.include(&quot;access_token&quot;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">更改后:</span><br><span class="line"></span><br><span class="line">//判断当返回结果中包含有access_token时,才通过json提取access_token值</span><br><span class="line">if(responseBody.search(&quot;access_toke&quot;!=-1))&#123; //search()查找是否包含某字段方法</span><br><span class="line"></span><br><span class="line">//因为JSON.parse()方法可以将字符串内容转换成对象形式,这样变量result就可以使用result.属性的方法</span><br><span class="line">var result = JSON.parse(responseBody)</span><br><span class="line">console.log(result.access_token);//打印var的access_token属性</span><br><span class="line">pm.globals.set(&quot;access_token&quot;, result.access_token);//把access_token设置全局变量</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pm.test(&quot;检查响应是否包含access_token值&quot;, function () &#123;</span><br><span class="line">    pm.expect(pm.response.text()).to.include(data.assert_value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>d.第四步点击<code>run collection</code>将<code>data.csv</code>上传至data功能处</p>
+<p>点击<code>preview</code>查看数据演示</p>
+<p>f.清空全选,选中单个接口运行</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\hhh\Desktop\判断结果.png" alt="date文件上传"></p>
+<h3 id="六-fiddler工具"><a href="#六-fiddler工具" class="headerlink" title="六.fiddler工具"></a>六.fiddler工具</h3><p>1.获取请求链接所有的请求头 ,在postman上点击功能键BulkEdit,输入这些请求头</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\hhh\Desktop\复制所有的请求头.png" alt="复制所有的请求头"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="C:\Users\hhh\Desktop\请求头.png" alt="请求头"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">GET /s?ie=utf-8&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=1&amp;tn=baidu&amp;wd=helloworld&amp;fenlei=256&amp;rsv_pq=9d1e79b700011649&amp;rsv_t=7eb2SCx1PugFhQCxdR5%2FU%2BH9IL3fZIiTrcIKxN1E1pLkGfjWL5%2BgIIV2421J&amp;rqlang=en&amp;rsv_dl=tb&amp;rsv_enter=1&amp;rsv_sug3=5&amp;rsv_sug1=4&amp;rsv_sug7=101&amp;rsv_sug2=0&amp;rsv_btype=i&amp;prefixsug=helloworld&amp;rsp=4&amp;inputT=6452&amp;rsv_sug4=8213 HTTP/1.1</span><br><span class="line">Host: www.baidu.com</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Cache-Control: max-age=0</span><br><span class="line">sec-ch-ua: &quot; Not A;Brand&quot;;v=&quot;99&quot;, &quot;Chromium&quot;;v=&quot;102&quot;, &quot;Google Chrome&quot;;v=&quot;102&quot;</span><br><span class="line">sec-ch-ua-mobile: ?0</span><br><span class="line">sec-ch-ua-platform: &quot;Windows&quot;</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</span><br><span class="line">Sec-Fetch-Site: same-origin</span><br><span class="line">Sec-Fetch-Mode: navigate</span><br><span class="line">Sec-Fetch-User: ?1</span><br><span class="line">Sec-Fetch-Dest: document</span><br><span class="line">Referer: https://cn.bing.com/</span><br><span class="line">Accept-Encoding: gzip, deflate, br</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="line">Cookie: PSTM=1602206858; BIDUPSID=B2609704B49E4BB52A6234BE123C9114; __yjs_duid=1_7214023cf5165172180f7377d29c219e1621776676211; BDSFRCVID_BFESS=3tIOJexroG38rlbemRTmhjJ6QmKK0gOTDYrEOwXPsp3LGJLVgHGfEG0PtOVzGoFbI1odogKKWmOTH7kF_2uxOjjg8UtVJeC6EG0Ptf8g0M5; H_BDCLCKID_SF_BFESS=tJ-HoC0XtDD3H48k-4QEbbQH-UnLqMvAtgOZ04n-ah05b-o1-4oV0l30MM6ZtqoLW20j0h7m3UTKsq76Wh35K5tTQP6rLtb73Kc4KKJxbp74Jl3vQ45zDt4OhUJiBhbLBan7_bvIXKohJh7FM4tW3J0ZyxomtfQxtNRJ0DnjtpChbC_9D6LbejjLeU5eetjK2CntsJOOaCkBbqbOy4oWK441DN7H2Pj-aGrn-bn_WDQGDqvoD-Jc3M04K4o9-hvT-54e2p3FBUQJOh3IQft20b0g3l6x2M5aWR6y0n7jWhvRDq72y5JOQlRX5q79atTMfNTJ-qcH0KQpsIJM5-DWbT8IjHCHqTDDJbKHoCvX-5rVjJnv2tP_-P4DepKJ0URZ56bHWh0bfPoSHR5z0lOIM-IpjRQLBMPj52OnKUT-3Cov8qc25f7WDtD03xJ70-543bRTLp7CMq3osRoVDtnfhP-UynJLWh37JK3lMKoaMp78jR093JO4y4Ldj4oxJpOJ5JbMopCafD_WhCD6ejKaenFyqxc0aPR8a-o2WbCQbUcU8pcN2b5oQTJbKxvaK4rNQNO3BqFKLR6vOIJTXpOUWJDkD4RuBq3tWT-D3t5C5hnnel5jDh3MXpKhQUnl5fFDaKny0hvcQb6cShP6MUjrDRLbXU6BK5vPbNcZ0l8K3l02V-bIe-t2XjQhDGAHJ6-8tJCs3t88KJjEe-Kk-PnVeTt3ytnZKRvHa2keVPosKJ5VVxbzM-6kjl_DyP4jKMRn3N5HKl75yUJ5qKOsQU6d34-nQUj405OTbgOpXq3O3JozhJ7ghPJvyp-DXnO7t-nlXbrtXp7_2J0WStbKy4oTjxL1Db3JKjvMtgDtVJO-KKC5MK0x3q; BAIDUID=07164A9259B71EDAEF5DFF8E9C9EC64B:FG=1; BAIDUID_BFESS=F7D52997C3EB96F965A2395BE54A2EFD:FG=1; COOKIE_SESSION=9431174_0_6_6_20_10_0_1_6_4_0_3_2807994_0_0_0_1634822155_0_1650896722%7C9%230_1_1615950967%7C1; BD_UPN=12314753; ZFY=VvdyyF0oDsneCav3mPLD5ecs4M:AjqQxNgDXxxS0wETY:C; ab_sr=1.0.1_N2QxZWJmOWMzZTA3NmZlN2I4ZGZlZTY3NTAzMzA4NWE1YTBhNmMyYTVjNGM0NTQ3MTViYjZkMDM1NGQ3NGU2MWM5OWQzODlmMmY3NTQ2MDgxZmY1ODIwZGJiOWMxYTNhMzY2NTk2Y2IyMDYxNjY5NDg2MjkwNDMyNjc3MjY3ZTdhYzY3NWU0MTBkZTlhMWEyOTE1MjJmYWUyY2I0MDJkMw==; RT=&quot;z=1&amp;dm=baidu.com&amp;si=aymt3kf34vh&amp;ss=l4qsj55r&amp;sl=5&amp;tt=9jt&amp;bcn=https%3A%2F%2Ffclog.baidu.com%2Flog%2Fweirwood%3Ftype%3Dperf&amp;ul=ln6&amp;hd=lqc&quot;; BD_HOME=1; H_PS_PSSID=36560_36625_36673_36455_31660_34813_36167_36569_36073_36267_26350_36469_22157; BA_HECTOR=008h8404a42h8l20ag1hb8fgj15; delPer=0; BD_CK_SAM=1; PSINO=3; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; channel=bing; H_PS_645EC=0255z1rq4m2iDrQCswLBaT8yeE6bJLmzQEBW9fZoXkRV5c11gyJHAY0cNrE; baikeVisitId=4dc53a4c-6f24-42de-be01-82b5b402263d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://a-little-sweet.github.io">saber</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://a-little-sweet.github.io/posts/5951da65.html">https://a-little-sweet.github.io/posts/5951da65.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://a-little-sweet.github.io" target="_blank">奈落のBlog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java</a></div><div class="post_share"><div class="social-share" data-image="https://imgapi.xl0408.top/index.php" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/6963fb18.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgapi.xl0408.top/index.php" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">可变参数</div></div></a></div><div class="next-post pull-right"><a href="/posts/73a264ed.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://api.btstu.cn/sjbz/?lx=dongman" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">键盘输入调用</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/3f209729.html" title="for循环"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://api.btstu.cn/sjbz/?lx=dongman" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-20</div><div class="title">for循环</div></div></a></div><div><a href="/posts/31f532fa.html" title="Java的包"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://api.btstu.cn/sjbz/?lx=dongman" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-12</div><div class="title">Java的包</div></div></a></div><div><a href="/posts/215392d1.html" title="java的多态"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://api.btstu.cn/sjbz/?lx=dongman" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-12</div><div class="title">java的多态</div></div></a></div><div><a href="/posts/f6ea766.html" title="super关键字"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://api.btstu.cn/sjbz/?lx=dongman" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-12</div><div class="title">super关键字</div></div></a></div><div><a href="/posts/254834b.html" title="switch分支结构"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://api.btstu.cn/sjbz/?lx=dongman" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-12</div><div class="title">switch分支结构</div></div></a></div><div><a href="/posts/a23c676d.html" title="三元运算符"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imgapi.xl0408.top/index.php" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-12</div><div class="title">三元运算符</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">saber</div><div class="author-info__description">本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E6%8E%A5%E5%8F%A3%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">一.接口概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E7%9A%84%E6%B5%81%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">二.接口测试的流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E6%8E%A5%E5%8F%A3%E5%8D%8F%E8%AE%AE"><span class="toc-number">3.</span> <span class="toc-text">三.接口协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%BB%E7%9F%A5"><span class="toc-number">4.</span> <span class="toc-text">须知</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E4%B8%B6-%E6%8E%A5%E5%8F%A3%E8%BF%94%E5%9B%9E%E7%9A%84%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="toc-number">4.1.</span> <span class="toc-text">1丶 接口返回的数据格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E4%B8%B6-%E5%A4%B4%E5%AD%97%E6%AE%B5"><span class="toc-number">4.2.</span> <span class="toc-text">2丶 头字段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E4%B8%B6%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87"><span class="toc-number">4.3.</span> <span class="toc-text">3丶请求报文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E4%B8%B6%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87"><span class="toc-number">4.4.</span> <span class="toc-text">4丶响应报文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E4%B8%B6HTTP%E7%9A%84-Post%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F"><span class="toc-number">4.5.</span> <span class="toc-text">5丶HTTP的 Post编码格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E4%B8%B6%E6%B3%A8%E6%84%8F"><span class="toc-number">4.6.</span> <span class="toc-text">6丶注意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E4%B8%B6Tcp-IP-%E5%8D%8F%E8%AE%AE"><span class="toc-number">4.7.</span> <span class="toc-text">7丶Tcp&#x2F;IP   协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%8E%A5%E5%8F%A3%E6%8A%A5%E6%96%87%E6%A8%A1%E7%89%88"><span class="toc-number">4.8.</span> <span class="toc-text">8,接口报文模版</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-postman%E5%B7%A5%E5%85%B7"><span class="toc-number">5.</span> <span class="toc-text">五.postman工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8A%9F%E8%83%BD%E6%A0%8F"><span class="toc-number">5.1.</span> <span class="toc-text">1.功能栏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%97%AE%E9%A2%98"><span class="toc-number">5.2.</span> <span class="toc-text">2.问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-postman%E7%8E%AF%E5%A2%83-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">5.3.</span> <span class="toc-text">3.postman环境&#x2F;全局变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-postman%E5%86%85%E7%BD%AE%E5%8A%A8%E6%80%81%E5%87%BD%E6%95%B0"><span class="toc-number">5.4.</span> <span class="toc-text">4.postman内置动态函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%A7%A3%E5%86%B3%E6%8E%A5%E5%8F%A3%E5%85%B3%E8%81%94%E9%97%AE%E9%A2%98"><span class="toc-number">5.5.</span> <span class="toc-text">5.解决接口关联问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8json%E6%8F%90%E5%8F%96%E5%99%A8"><span class="toc-number">5.5.1.</span> <span class="toc-text">1.使用json提取器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8F%90%E5%8F%96%E5%99%A8"><span class="toc-number">5.5.2.</span> <span class="toc-text">2.使用正则表达式提取器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-postman%E7%9A%84%E6%96%AD%E8%A8%80"><span class="toc-number">5.6.</span> <span class="toc-text">6.postman的断言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%8A%9F%E8%83%BD%E6%A0%8F-1"><span class="toc-number">5.6.1.</span> <span class="toc-text">1.功能栏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%96%AD%E8%A8%80%E7%9A%84%E6%B5%81%E7%A8%8B%E5%8F%8A%E6%B3%A8%E6%84%8F"><span class="toc-number">5.6.2.</span> <span class="toc-text">2.断言的流程及注意</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%AE%BE%E7%BD%AE%E5%85%A8%E5%B1%80%E6%96%AD%E8%A8%80"><span class="toc-number">5.6.3.</span> <span class="toc-text">3.设置全局断言</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E6%89%A7%E8%A1%8C%E5%BC%80%E5%A7%8B"><span class="toc-number">5.7.</span> <span class="toc-text">7.执行开始</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%BF%90%E8%A1%8C%E6%89%80%E6%9C%89%E6%8E%A5%E5%8F%A3-%E6%9F%A5%E7%9C%8B%E4%BF%A1%E6%81%AF"><span class="toc-number">5.7.1.</span> <span class="toc-text">1.运行所有接口,查看信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%87%AA%E5%8A%A8%E5%88%A4%E6%96%AD%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8F%82%E6%95%B0%E7%BB%93%E6%9E%9C"><span class="toc-number">5.7.2.</span> <span class="toc-text">2. 自动判断接口的参数结果</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-fiddler%E5%B7%A5%E5%85%B7"><span class="toc-number">5.8.</span> <span class="toc-text">六.fiddler工具</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/d3d28240.html" title="随机动漫Api"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://api.btstu.cn/sjbz/?lx=dongman" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="随机动漫Api"/></a><div class="content"><a class="title" href="/posts/d3d28240.html" title="随机动漫Api">随机动漫Api</a><time datetime="2022-11-22T14:13:37.000Z" title="发表于 2022-11-22 22:13:37">2022-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3f209729.html" title="for循环"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://api.btstu.cn/sjbz/?lx=dongman" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="for循环"/></a><div class="content"><a class="title" href="/posts/3f209729.html" title="for循环">for循环</a><time datetime="2022-11-20T11:00:00.000Z" title="发表于 2022-11-20 19:00:00">2022-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/cb2b897.html" title="标识符的命名规则规范"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://api.btstu.cn/sjbz/?lx=dongman" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="标识符的命名规则规范"/></a><div class="content"><a class="title" href="/posts/cb2b897.html" title="标识符的命名规则规范">标识符的命名规则规范</a><time datetime="2022-11-11T22:41:36.261Z" title="发表于 2022-11-12 06:41:36">2022-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/254834b.html" title="switch分支结构"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://api.btstu.cn/sjbz/?lx=dongman" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="switch分支结构"/></a><div class="content"><a class="title" href="/posts/254834b.html" title="switch分支结构">switch分支结构</a><time datetime="2022-11-11T22:41:36.259Z" title="发表于 2022-11-12 06:41:36">2022-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f6ea766.html" title="super关键字"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://api.btstu.cn/sjbz/?lx=dongman" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="super关键字"/></a><div class="content"><a class="title" href="/posts/f6ea766.html" title="super关键字">super关键字</a><time datetime="2022-11-11T22:41:36.247Z" title="发表于 2022-11-12 06:41:36">2022-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By saber</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="1708664797" data-server="tencent" data-type="playlist"   data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><div class="app-refresh" id="app-refresh" style="position: fixed;top: -2.2rem;left: 0;right: 0;z-index: 99999;padding: 0 1rem;font-size: 15px;height: 2.2rem;transition: all 0.3s ease;"><div class="app-refresh-wrap" style=" display: flex;color: #fff;height: 100%;align-items: center;justify-content: center;"><label>✨ 有新文章啦！ 👉</label><a href="javascript:void(0)" onclick="location.reload()"><span style="color: #fff;text-decoration: underline;cursor: pointer;">🍗点击食用🍔</span></a></div></div><script>if ('serviceWorker' in navigator) {
+if (navigator.serviceWorker.controller) {
+navigator.serviceWorker.addEventListener('controllerchange', function() {
+showNotification()
+})
+}
+window.addEventListener('load', function() {
+navigator.serviceWorker.register('/sw.js')
+})
+}
+function showNotification() {
+if (GLOBAL_CONFIG.Snackbar) {
+var snackbarBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+GLOBAL_CONFIG.Snackbar.bgLight :
+GLOBAL_CONFIG.Snackbar.bgDark
+var snackbarPos = GLOBAL_CONFIG.Snackbar.position
+Snackbar.show({
+text: '✨ 有新文章啦！ 👉',
+backgroundColor: snackbarBg,
+duration: 500000,
+pos: snackbarPos,
+actionText: '🍗点击食用🍔',
+actionTextColor: '#fff',
+onActionClick: function(e) {
+location.reload()
+},
+})
+} else {
+var showBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+'#3b70fc' :
+'#1f1f1f'
+var cssText = `top: 0; background: ${showBg};`
+document.getElementById('app-refresh').style.cssText = cssText
+}
+}#app-refresh.app-refresh(style='position: fixed;top: -2.2rem;left: 0;right: 0;z-index: 99999;padding: 0 1rem;font-size: 15px;height: 2.2rem;transition: all 0.3s ease;')
+.app-refresh-wrap(style=' display: flex;color: #fff;height: 100%;align-items: center;justify-content: center;')
+  label ✨ 有新文章啦！ 👉
+  a(href='javascript:void(0)' onclick='location.reload()')
+    span(style='color: #fff;text-decoration: underline;cursor: pointer;') 🍗点击食用🍔</script><script>if ('serviceWorker' in navigator) {
+if (navigator.serviceWorker.controller) {
+navigator.serviceWorker.addEventListener('controllerchange', function() {
+showNotification()
+})
+}
+window.addEventListener('load', function() {
+navigator.serviceWorker.register('/sw.js')
+})
+}
+function showNotification() {
+if (GLOBAL_CONFIG.Snackbar) {
+var snackbarBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+GLOBAL_CONFIG.Snackbar.bgLight :
+GLOBAL_CONFIG.Snackbar.bgDark
+var snackbarPos = GLOBAL_CONFIG.Snackbar.position
+Snackbar.show({
+text: '✨ 有新文章啦！ 👉',
+backgroundColor: snackbarBg,
+duration: 500000,
+pos: snackbarPos,
+actionText: '🍗点击食用🍔',
+actionTextColor: '#fff',
+onActionClick: function(e) {
+location.reload()
+},
+})
+} else {
+var showBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+'#3b70fc' :
+'#1f1f1f'
+var cssText = `top: 0; background: ${showBg};`
+document.getElementById('app-refresh').style.cssText = cssText
+}
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = '1fab9b645cad4ade99506944d2273c5f';
+  var gaud_map_key = 'de2fe7fb214fbccf408546bf9f216e7e';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '112.982279,28.19409';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly_v4.2.2" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" data-title="本站使用JsDelivr为静态资源提供CDN加速" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a><a class="github-badge" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" style="margin-inline:5px" title=""><img alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="/js/runtime/runtime.min.js"></script><script async src="/js/ali_font.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('article-sort-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__slideInRight');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>
