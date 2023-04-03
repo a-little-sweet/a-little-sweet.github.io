@@ -6,7 +6,7 @@
   <link href="https://a-little-sweet.github.io/atom.xml" rel="self"/>
   
   <link href="https://a-little-sweet.github.io/"/>
-  <updated>2023-04-03T12:16:48.283Z</updated>
+  <updated>2023-04-03T12:30:17.383Z</updated>
   <id>https://a-little-sweet.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://a-little-sweet.github.io/posts/0.html"/>
     <id>https://a-little-sweet.github.io/posts/0.html</id>
     <published>2023-04-03T12:26:33.354Z</published>
-    <updated>2023-04-03T12:16:48.283Z</updated>
+    <updated>2023-04-03T12:30:17.383Z</updated>
     
     <content type="html"><![CDATA[<p>title: 1.4书籍推荐<br>tags: 学习栈<br>keywords: 学习栈<br>cover: ‘<a href="https://air.moe/ranimg/api.php">https://air.moe/ranimg/api.php</a>‘</p><h3 id="好书推荐"><a href="#好书推荐" class="headerlink" title="好书推荐"></a>好书推荐</h3><blockquote><p>2023.4 .2</p></blockquote><p><a href="https://www.zhihu.com/question/25563234">https://www.zhihu.com/question/25563234</a>  万万没想到：用理工科思维理解世界》</p><h3 id="读书的建议"><a href="#读书的建议" class="headerlink" title="读书的建议"></a>读书的建议</h3><p><a href="http://mindhacks.cn/2008/09/17/learning-habits-part3">http://mindhacks.cn/2008/09/17/learning-habits-part3</a></p>]]></content>
     
@@ -42,7 +42,7 @@
     <link href="https://a-little-sweet.github.io/posts/0.html"/>
     <id>https://a-little-sweet.github.io/posts/0.html</id>
     <published>2023-04-03T12:26:22.707Z</published>
-    <updated>2023-04-02T14:29:21.850Z</updated>
+    <updated>2023-04-03T12:30:17.386Z</updated>
     
     
     
@@ -55,7 +55,7 @@
     <link href="https://a-little-sweet.github.io/posts/0.html"/>
     <id>https://a-little-sweet.github.io/posts/0.html</id>
     <published>2023-04-03T12:26:14.337Z</published>
-    <updated>2023-04-03T12:14:49.585Z</updated>
+    <updated>2023-04-03T12:30:17.380Z</updated>
     
     <content type="html"><![CDATA[<p>title: 1.2 阅读方法<br>tags: 学习栈<br>keywords: 学习栈<br>cover: ‘<a href="https://api.ghser.com/random/api.php">https://api.ghser.com/random/api.php</a>‘</p><ol><li><strong>趁着对一件事情有热情的时候，一股脑儿把万事开头那个最难的阶段熬过去</strong>。万事开头难，因为从不了解到了解基本的一些事实，是一个新知识暴涨的阶段，这个时候的困难是最大的。有人熬不过去，觉得困难太大就放弃了。不过，狂热的兴趣可以抵消对困难的感觉，所以趁着对一件事情有热情的时候，开一个好头是很重要的。（当然，这并不是说持之以恒就不重要了）。当然，也许这个是因人而异的，对我来说我会在对一件事情有浓厚兴趣的时候非常专注地学习，把很多 groundworks 做掉。后面就会顺利一些了。</li><li><strong>根据主题来查阅资料，而不是根据资料来查阅主题</strong>。以前读书的时候是一本一本的读，眼里看到的是一本一本的书，现在则是一章、甚至一节一节的读，眼中看到的不是一本一本的书，而是一堆一堆的章节，一个一个的知识主题，按照主题来阅读，你会发现读的时候不再是老老实实地一本书看完看另一本，而是非常频繁地从一本书跳到另一本书，从一处资料跳到另一处资料，从而来获得多个不同的人对同一个主题是如何讲解的。比如最近我发现在看蒙特卡罗算法时就查了十来处资料，其中有三四篇 paper 和六七本书；这是因为即便是经典的书，你也不能指望它对其中每一个主题的介绍都是尽善尽美的，有些书对某个主题（知识点）的介绍比较到位，有些书则对另一些知识点介绍得比较到位。而有时候一篇紧凑的 paper 比一本书上讲得还要好。我硬盘里面的书按主题分类，每个主题下面都有一堆书，当我需要学习某个主题的知识时（譬如贝叶斯学习或者神经网络），我会把里面涉及这个主题的书都翻开来，索引到相关章节，然后挑讲得好的看。那么，如何判断一个资料是好资料还是坏资料呢？</li><li><strong>好资料，坏资料</strong>。好资料的特点：从问题出发；重点介绍方法背后的理念（ rationale ），注重直观解释，而不是方法的技术细节；按照方法被发明的时间流程来介绍（先是遇到了什么什么问题，然后怎样分析，推理，最后发现目前所使用的方法）。坏资料的特点是好资料的反面：上来就讲方法细节，仿佛某方法是从天上掉下来的，他们往往这样写“我们定义… 我们称… 我们进行以下几个步骤… ”。根本不讲为什么要用这个方法，人们最初是因为面对什么问题才想到这个方法的，其间又是怎样才想出了这么个方法的，方法背后的直观思想又是什么。实际上一个方法如果将其最终最简洁的形式直接表达出来往往丢失掉了绝大多数信息，这个丢掉的信息就是问题解决背后的思维过程。至于为什么大多数书做不到这一点，我在<a href="http://blog.csdn.net/pongba/archive/2008/07/07/2622713.aspx">这里</a>试着分析过。</li><li><strong>学习一个东西之前，首先在大脑中积累充分的“疑惑感”</strong>。即弄清面临的问题到底是什么，在浏览方法本身之前，最好先使劲问问自己能想到什么方法。一个公认的事实是，你对问题的疑惑越大，在之前做的自己的思考越多，当看到解答之后印象就越深刻。记得大学里面的课本总是瀑布式地把整个知识结构一览无余地放在面前，读的过程倒是挺爽，连连点头，读完了很快又忘掉了，为什么？因为没有带着疑问去学习。</li><li><strong>有选择地阅读</strong>。很多人觉得我读书速度很快，其实我只是有选择地阅读。这里的选择体现在两个地方，一是选择一本书中感兴趣的章节优先阅读。二是对一本书中技术性较弱或信息密度较低的部分快速地略读。一般来说，除了技术性非常强的书之外，大多数书的信息密度很低，有很多废话。一般来说在阅读的时候应该这样来切分内容：1. 问题是什么？2. 方案是什么？3. 例子是什么？如果是需要解释一个现象的（譬如《黑天鹅》），那么1. 现象是什么？2. 解释是什么？3. 支撑这个解释的理由是什么？4. 例子是什么？一般来说，这一二三四用不了多少字就可以写完了（如果假设只举一到两个精到的例子的话），这样的无废话著作的典型是《合作的进化》；那为什么有些书，明明核心观点就那点东西（顶多加上几个精要的例子罢了）却写得长得要命呢？因为人的思维都有一个“联想”的特点，写着写着就容易旁逸斜出，而且作者自己也往往觉得引申出去挺牛逼，有时候很多与主题无关的废话就掺和进来了；那么，阅读的时候就应该有选择性地滤掉这些不相干的废话；此外还有一种可能性就是大量冗余的例子。一般来说组织得比较好的书会有详细且一目了然的目录和索引，根据目录首先就可以滤掉一部分（比如某个子章节的内容你以前是看过的），然后有时候作者还会举很多冗余的例子，如果你已经觉得印象够深刻了这些例子完全可以不看（一些书就非常厚道地对每个观点只辅以一两个最最经典的例子，譬如《与众不同的心理学——如何正视心理学》，这样的书我最是喜欢）。</li><li><strong>为什么看不懂</strong>？如果看不懂一个知识，一般有如下几个可能的原因：1. 你看得不够使劲。对此古人总结过——书读百遍其义自现。虽然这个规律不是任何时候都成立的，但是从认知科学的角度看是完全可以解释的，我们在阅读的时候，注意力往往会有选择性地关注其中的某一些“点”，而忽略了另一些“点”，于是一遍看下来可能因为某一些忽略导致无法理解整体。或者干脆看的时候就没注意其中一些细节但重要的东西。此外，大脑理解一个东西需要一定的处理时间，人脑的处理速度很慢，神经冲动每秒传输速度不过百米，所以不能指望看到哪懂到哪。最后，我们可能因为思维定势的原因会从某个特定的角度去看一句话而忽略了从不同角度去理解的可能性。对于这类情况，仔仔细细地再多读两遍，多试着去理解两遍，往往会“哦！原来这样。”地恍然大悟。2. 其中涉及到了你不懂的概念。这是技术性的不理解。这种情况就需要 Cross Reference 。如果一句话中用到了你不懂的概念，那就去查，现在很多书都是电子书，直接搜索一下，或者，对于纸书，看一下书后面的索引就行了。奇怪的是很多人看不懂也不分析一下为什么不懂，就直接放弃了。正如解决问题一样，问题卡住解决不了，第一时间要做的就是分析到底为什么解决不了，而不是直接求救。3. 作者讲述的顺序不对，你接着往下看，也许看到后面就明白了前面的了。</li></ol><p><strong>杂项</strong></p><ol><li><p><strong>如何在阅读之前就能获得对一本书质量的大致评估</strong>。在深入阅读之前能够迅速评估一本书的质量可以节省很多时间。基本上有几个线索：1. 看作者。牛作者写的书一般都不错。2. 看目录和简介。一份好的目录和简介能够透露这本书质量的相当一部分信息。目录结构是否清晰，是否直白（而不是装神弄鬼），都是衡量的线索。3. 看 Amazon 上的评价，这里要注意的是，除了看整体打分之外，更要看打分最低的人是怎么说的，因为小众意见往往有可能来自那些真正懂行的人（除了来踢馆的），如果在打分最低的意见里面看不到真正有价值的反驳意见的话就相当肯定书是不错的了。4. 看样章。Amazon 上一般都可以随机浏览一些章节的，表达是否清晰，论证是否严谨，内容是否深刻，基本是几页纸就能看出来的。</p></li><li><p><strong>如何搜寻到好书</strong>。几个线索：1. 同作者的著作。2. Amazon 相关推荐和主题相关的书列（类似豆瓣的豆列）。3. 一本好的著作（或一份好的资料——不管是书还是网页）在参考资料里面重点提到的其他著作。4. 有时对于一个主题，可以搜索到好心人总结的参考资源导引，那是最好不过的。</p></li></ol><p>titls: 万事开头难，以至于万事难开头，可当你开头了，万事也就不难了。兴趣是最好的导师，专注力是最好的动力，有了这些，妈妈再也不用担心我的学习。好读书，读好书，并不是所有的书都是好书，并不是所有的好书都是好的，真正好的只是其中的精华。要学会把书读薄，然后再把书读厚。做什么事情都一样，要掌握方法。方法对了，世界就对了。</p>]]></content>
     
@@ -75,14 +75,14 @@
     <link href="https://a-little-sweet.github.io/posts/0.html"/>
     <id>https://a-little-sweet.github.io/posts/0.html</id>
     <published>2023-04-03T12:25:49.837Z</published>
-    <updated>2023-04-03T12:25:26.690Z</updated>
+    <updated>2023-04-03T12:44:37.393Z</updated>
     
-    <content type="html"><![CDATA[<p>title: 如何做副业<br>tags: 其他文件<br>keywords: 学习栈<br>cover: ‘<a href="https://api.ghser.com/random/api.php">https://api.ghser.com/random/api.php</a>‘</p><p>1、做副业的目的是什么（增加收入）</p><p>2、做副业的目标是什么（月入1万，月入2万……）</p><p>3、每天什么时间做，投入多少时间（空余时间，下班后，1-3小时等）</p><p>4、做什么项目（适合自己的项目）</p><p>5、用什么方法做（适合自己的方法）</p><p>6、每天都做些什么（和项目相关的事）</p><p>7、怎样能快速做出满意的成绩（摸透规则，掌握方法技巧和思路）</p><p>8、怎样保持成绩长期稳定（坚持和专注）</p><p>9、怎样放大操作（以量放大，以法放大）</p>]]></content>
+    <content type="html"><![CDATA[<p>title: 如何做副业<br>      tags: 其他文件<br>      keywords: 学习栈<br>      cover: ‘<a href="https://api.ghser.com/random/api.php">https://api.ghser.com/random/api.php</a>‘</p><p>1、做副业的目的是什么（增加收入）</p><p>2、做副业的目标是什么（月入1万，月入2万……）</p><p>3、每天什么时间做，投入多少时间（空余时间，下班后，1-3小时等）</p><p>4、做什么项目（适合自己的项目）</p><p>5、用什么方法做（适合自己的方法）</p><p>6、每天都做些什么（和项目相关的事）</p><p>7、怎样能快速做出满意的成绩（摸透规则，掌握方法技巧和思路）</p><p>8、怎样保持成绩长期稳定（坚持和专注）</p><p>9、怎样放大操作（以量放大，以法放大）</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;title: 如何做副业&lt;br&gt;tags: 其他文件&lt;br&gt;keywords: 学习栈&lt;br&gt;cover: ‘&lt;a href=&quot;https://api.ghser.com/random/api.php&quot;&gt;https://api.ghser.com/random/api.ph</summary>
+    <summary type="html">&lt;p&gt;title: 如何做副业&lt;br&gt;      tags: 其他文件&lt;br&gt;      keywords: 学习栈&lt;br&gt;      cover: ‘&lt;a href=&quot;https://api.ghser.com/random/api.php&quot;&gt;https://api.ghser</summary>
       
     
     
@@ -95,7 +95,7 @@
     <link href="https://a-little-sweet.github.io/posts/0.html"/>
     <id>https://a-little-sweet.github.io/posts/0.html</id>
     <published>2023-04-03T12:24:15.861Z</published>
-    <updated>2023-04-03T11:58:21.327Z</updated>
+    <updated>2023-04-03T12:30:17.393Z</updated>
     
     <content type="html"><![CDATA[<p>title: 电脑效率<br>    tags: 其他文件<br>    keywords: IT类<br>    cover: ‘<a href="https://api.hanximeng.com/ranimg/api.php">https://api.hanximeng.com/ranimg/api.php</a>‘</p><h3 id="1-uTools"><a href="#1-uTools" class="headerlink" title="1.  uTools"></a>1.  uTools</h3><blockquote><p><strong>uTools</strong> 是一个极简、插件化、跨平台的桌面效率软件，同时支持 Win、Mac 和 Linux 系统。<br>它以插件的形式，将很多实用的常用工具集合起来，让我们可以自由选择安装自己需要的功能，打造一个专属的工具集合。</p></blockquote><p><img src="https://mmbiz.qpic.cn/mmbiz_gif/wd0A9LjWKMe0UsPtUQqjl5TglxYcQMwNFdEDkYTI42QD18hUcPCJOCTyUUAJbrQ2zO9bicXhXs5rNMCbmbibd1Ug/640?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1" alt="图片"></p><p><strong>软件特性：</strong>  </p><ul><li><p>插件中心：以插件的形式提供各种实用工具和功能，可以按需安装；</p></li><li><p>多功能输入框：支持文本、图片、文件等输入；</p></li><li><p>自动粘贴：唤出 uTools 时，自动将剪贴板中 5 秒内的内容粘贴进去；</p></li><li><p>全局快捷键：一键唤起小工具，如上传图片、以图搜图、翻译等；</p></li></ul><h3 id="笔记效率"><a href="#笔记效率" class="headerlink" title="笔记效率"></a>笔记效率</h3><p><del>先暂时使用这个随机  <a href="https://cn.piliapp.com/random/lots/">https://cn.piliapp.com/random/lots/</a></del></p><p>实现随机api图片   <a href="https://www.cnblogs.com/hlmy/p/16640635.html">https://www.cnblogs.com/hlmy/p/16640635.html</a></p>]]></content>
     
@@ -115,7 +115,7 @@
     <link href="https://a-little-sweet.github.io/posts/0.html"/>
     <id>https://a-little-sweet.github.io/posts/0.html</id>
     <published>2023-04-03T12:24:08.059Z</published>
-    <updated>2023-04-03T12:01:44.200Z</updated>
+    <updated>2023-04-03T12:30:17.390Z</updated>
     
     <content type="html"><![CDATA[<p>title: 毕业后，你还可以学些什么？<br>    tags: 其他文件<br>    keywords: IT类<br>    cover: ‘<a href="https://imgapi.xl0408.top/index.php">https://imgapi.xl0408.top/index.php</a>‘</p><h3 id="网络资源"><a href="#网络资源" class="headerlink" title="网络资源"></a>网络资源</h3><ul><li><a href="http://www.ted.com/">TED</a>：尖峰创想，启迪心智</li><li><a href="http://itunes.stanford.edu/">斯坦福开放大学</a>：免费读大学，最新的类似于IOS开发与Ruby开发系列课程，你可以免费找到</li><li><a href="http://ocw.mit.edu/courses/">MIT开放课程</a>：世界上最好的理工学院，关于人工智能等议题开启你的好奇心</li><li><a href="http://www.youtube.com/">YouTube</a>:大量的学习视频都集中在这里</li><li><a href="http://stackexchange.com/sites">stackexchange</a>：全世界的热心人士都集中在这里提问与回答问题</li><li><a href="http://edge.org/">edge</a>：牛人与牛人对话</li><li><a href="http://www.plos.org/">PLOS</a>：开源模式在学术界的应用，公共图书馆，你可以免费看到最新的论文；你也可以提交自己的论文</li></ul><h3 id="中文汉化："><a href="#中文汉化：" class="headerlink" title="中文汉化："></a>中文汉化：</h3><ul><li><a href="http://tedtochina.com/">TEDtochina</a>：TED中文社区，不仅仅是翻译。</li><li><a href="http://open.163.com/">网易公开课</a>：有TED及各个国外大学的开放课程的翻译。</li><li><a href="http://www.myoops.org/main.php">MyOOPS开放课程</a>：来自全球顶尖大学的开放式课程，现在由世界各国的数千名义工志工为您翻译成中文。</li><li><a href="http://dongxi.net/">东西网</a>与<a href="http://www.yeeyan.org/">译言</a>：有部分edge翻译材料。</li><li><a href="http://www.youku.com/">优酷</a>:汉化了不少YouTube资源。</li></ul><h3 id="思维"><a href="#思维" class="headerlink" title="思维"></a>思维</h3><p>对思维的深度思考与刻意练习，将拥有较高人生自由度。</p><p>图书</p><p>一般来说，以下推荐的图书组合，以中文图书为主，top10往往是必读，其他的可以泛读与选读。</p><h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><p>中国的作文训练让我们丧失表达欲望。如果不上大学，你可以通过西式的创意写作课程补上这一课。当恢复对写作的热情之后，再从中国传统文化中汲取营养。</p><ul><li><a href="http://book.douban.com/doulist/1269878/">开始写作吧</a>：以西方的创意写作课程图书为主。</li></ul><h3 id="编程图书"><a href="#编程图书" class="headerlink" title="编程图书"></a>编程图书</h3><ul><li><a href="http://book.douban.com/doulist/1244005/">全世界程序员都说好的图书</a>：在<a href="http://stackoverflow.com/questions/1711/what-is-the-single-most-influential-book-every-programmer-should-read?tab=votes#tab-top">stackoverflow书单</a>基础上整理，多为经典图书。其中1-12本为stack overflow推荐，全世界程序员都说好的图书。</li><li><a href="http://book.douban.com/doulist/1222802/">Ruby与Rails开发基础书单</a>:涵盖了Ruby与Rails3新手所需要的主要技能。Ruby与Rails的组合，能够快速进入Web开发世界。</li><li><a href="http://book.douban.com/doulist/1237672/">与小朋友一起学编程</a>：一些入门的计算机编程读物，面向小朋友写的。所以不用担心自己读不懂。涵盖Python，Ruby与Arduino等。</li></ul><p>网站：</p><ul><li><a href="http://github.com/">github.com</a>：世界上最优秀的程序员集中地带。</li><li><a href="http://stackoverflow.com/">stackoverflow</a>：世界上最热心的程序员集中地带，你的常见问题都可以在这里找到答案。</li></ul><h3 id="创新图书"><a href="#创新图书" class="headerlink" title="创新图书"></a>创新图书</h3><ul><li><a href="http://book.douban.com/doulist/1237682/">成为创新者：诞生伟大设计与产品的新模式</a>：以triz及创新算法为主。</li><li><a href="http://book.douban.com/doulist/1222896/">ReWork系列图书</a>：一些有干货的创业图书。</li><li><a href="http://www.v2ex.com/rework">Rework中文</a>：小而美的创业之旅。</li></ul><p>网站：</p><ul><li><a href="http://paulgraham.com/">paulgraham</a>：一位对创业有独特思考的长者。</li><li><a href="http://news.ycombinator.com/">Hacker News</a>: 技术创业者集中地带。</li><li><a href="http://www.tisiwi.com/123">部分中文资源索引</a></li></ul><h3 id="学习部落"><a href="#学习部落" class="headerlink" title="学习部落"></a>学习部落</h3><p>社交网络如何影响人们的学习和个人发展？不论是线上，还是线下，总有一些人，有一些地方，给我们启迪和帮助，引领我们进步。你和你身边的学友及导师，组成了你的个人学习部落。</p><p>与学友和导师的私下深度交流，助益于心智反省，秘笈传递。你的学习部落通过一次次的“触动-行动-反馈”的循环影响你。</p>]]></content>
     
@@ -135,7 +135,7 @@
     <link href="https://a-little-sweet.github.io/posts/0.html"/>
     <id>https://a-little-sweet.github.io/posts/0.html</id>
     <published>2023-04-03T11:28:26.969Z</published>
-    <updated>2023-04-03T12:23:01.898Z</updated>
+    <updated>2023-04-03T12:30:17.395Z</updated>
     
     <content type="html"><![CDATA[<p>title: 1.4书籍推荐<br>tags: 学习栈<br>keywords: 学习栈<br>cover: ‘<a href="https://api.ghser.com/random/api.php">https://api.ghser.com/random/api.php</a>‘</p><blockquote><p>岗位胜任力模型：也叫做核心能力模型，英文是 competency，在组织管理中，胜任素质是指驱动员工作出卓越绩效的一系列综合素质，是员工通过不同方式表现出来的知识、技能/能力、职业素养、自我认知、特质和动机等的素质集合。</p><p>以下给出一套标准的能力定义库共参考（前十二大项）</p></blockquote><ol><li>督导能力（DIRECTING WORK THROUGH OTHERS）</li><li>影响力（INFLUENNCE）</li><li>预期应对能力（INITIATIVE）</li><li>判断能力（JUDGMENT）</li><li>倾听与反应（LISTENING AND RESPONDING）</li><li>组织内活动能力（ORGANIZATIONAL AWARENESS） </li><li>项目管理能力（ORGANIZING WORK/PROJECT MANAGEMENT）</li><li>积极主动性（PERSONAL DRIVE）</li><li>关系网建立（RELATIONSHIP BUILDING）</li><li>自信（SELF—CONFIDENCE）</li><li>展望力（VISIONING）</li><li>团队精神（WORKING WITH OTHERS）</li></ol><p><img src="https://pic1.zhimg.com/80/v2-d0620ec260b858c410910d27f063eccc_720w.webp" alt=""><img src="https://pic4.zhimg.com/80/v2-232860f90166957744578d4313ffd12f_720w.webp" alt=""></p>]]></content>
     
@@ -151,11 +151,36 @@
   </entry>
   
   <entry>
+    <title>人体营养均衡</title>
+    <link href="https://a-little-sweet.github.io/posts/427016e9.html"/>
+    <id>https://a-little-sweet.github.io/posts/427016e9.html</id>
+    <published>2023-03-21T11:40:26.797Z</published>
+    <updated>2023-04-03T12:48:47.034Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="适应人群"><a href="#适应人群" class="headerlink" title="适应人群"></a>适应人群</h3><blockquote><p>适合人群：18-55岁健康人群</p></blockquote><h3 id="每日必须"><a href="#每日必须" class="headerlink" title="每日必须"></a>每日必须</h3><blockquote><ol><li>基础营养:  <font color="#4bacc6">糖类、脂肪、膳食纤维、水分</font></li><li>维生素:   <font color="#4bacc6">A，B1，B2，B3，B5 ，B6, B9 , B12，C，D，E，H，K</font></li><li>矿物质类:    <font color="#4bacc6">Ca，P，K， Mg，Na，Cl，S，Fe，Cu，I，Mn ，Zn，Co，Mo，F，Cr，Se</font>  <pre><code>          ( 钙，磷，钾，镁，钠，氯，硫，铁，铜，碘，锰，锌  钴，钼， 氟，铬，硒 )</code></pre><ol><li>氨基酸类:  <font color="#4bacc6">异亮氨酸，亮氨酸，赖氨酸，蛋氨酸，苯丙氨酸，苏氨酸，色氨酸，缬氨酸</font></li></ol></li></ol></blockquote><h4 id="1-基础营养"><a href="#1-基础营养" class="headerlink" title="1. 基础营养"></a>1. 基础营养</h4><ol><li>蛋白质:每日蛋白质的摄取量应为总热量的 10%。日建议摄取总量是 55~65克。</li><li>糖类：糖类的摄取量随个人热量的需要而定，总热量的 45~55%，不得少于 20%。</li><li>脂肪:每日脂肪的摄取量不宜超过总热量的 25~30%。女性摄取 55~65 克，男性每日不宜超过 90 克。 </li><li>膳食纤维：每日需求量 20~30 克。以每100大卡摄取10 克的膳食纤维为标准，应慢慢增加份量 </li><li>水分：H2O成人每日总需水量为每公斤体重 30~45cc，实际需补充的 随个人需求而调整。 </li></ol><h4 id="2-维生素类"><a href="#2-维生素类" class="headerlink" title="2. 维生素类"></a>2. 维生素类</h4><p>6、维生素 A ：<br>成年男性每天摄取量约 5,000 IU，女性为 4,200 IU。IU(国际单位)。每日应摄取 6~15 毫克的β-胡萝卜素。保持皮肤、头发及牙龈健康、维持视力正 常、使免疫力正常、帮助骨骼生长、促进成长<br>缺乏的危害：骨骼无法正常生长<br>富含维生素 A的食品：肝、牛奶、牛油、鱼肝油、人参、菠菜、 </p><p>7、维生素 B1：<br>成年男性每日摄取量 1.2~1.5 毫克，女性为 1~1.1 毫克<br>缺乏的危害：水肿、麻木<br>富含维生素B1的食品：54V鲜活螺旋藻、糙米、核果类、酵母粉 </p><p>8、维生素 B2：<br>成年男性每日摄取量为 1.2~1.8 毫克，女性为 1~1.5 毫克。能帮助营养素代谢的美容维生素<br>缺乏的危害：角膜炎、口角炎、皮肤炎、眼睛畏光<br>富含维生素B2的食品：奶酪、肉类、肉脏类、绿色蔬菜 </p><p>9、维生素 B3：<br>成年男性每日摄取量为 14~22 毫克，女性为 12~17 毫克，烟碱酸。有助DNA的合成.<br>富含维生素B3的食品：鱼、鸡肉、猪肝、黄绿色蔬菜、豆类、全榖制品、蛋、奶酪 </p><p>10、维生素 B5：<br>成人每日摄取量为 4~7 毫克，女性怀孕及哺乳期可增加到5-9 毫克（泛酸）<br>缺乏的危害：低血糖症、血液及皮肤异常、疲倦、抑郁、失眠、食欲不振，<br>富含维生素B5的食品：胚芽、糙米、麸皮、豌豆、花生、扁豆</p><p>11、维生素 B9：<br>成人每日摄取量为 200 微克。上限是 1 毫克。 帮助DNA合成，预防心脏病发作及癌症。孕妇适量摄取有利胎儿神经细胞的发育，促进乳汁分泌。<br>缺乏的危害：巨球性贫血、舌疮、身体虚弱无力、失眠<br>富含维生素B9的食品：新鲜的绿色蔬菜、、肝、肾、瘦肉、香蕉 </p><p>12、维生素 B12：<br>成人每日摄取量为 3 微克。能预防贫血的红色维生素。促进核酸之合成<br>缺乏的危害：出现贫血、消化不良<br>富含维生素B12的食品：牛肉、奶酪、蛋、牛奶、豆腐、肝脏 </p><p>13、维生素 C：<br>成人每日摄取量为 60~100 毫克。对抗万病源头的病菌及压力，并改善肌肤困扰。<br>缺乏的危害：坏血病、牙质疏松、伤口复原缓慢。<br>富含维生素C的食品：深绿及黄红色蔬菜、水果、奇异果、柠檬 </p><p>14、维生素 D :<br>成人每天摄取量约为 5~7.5 微克。与维生素 A、C、胆碱、钙、磷一同摄取可相辅相成，又称为阳光维他命。<br>缺乏的危害：骨齿不良、骨质疏松症。<br>富含维生素D的食品：鱼肝油、蛋、牛油、鱼类、肝、添加维生素D的鲜奶、(阳光可使皮下胆固醇换成维他命D)</p><p>15、维生素 E ：<br>成年男性每日摄取量为 12 毫克，女性为 10 毫克。保持血管健康、预防癌症，防止细胞氧化、治疗不孕等作用。<br>缺乏的危害：缺乏足够维他命E会引致溶血性贫血；<br>富含维生素E的食品：植物油、全麦谷类、南瓜 </p><p>16、维生素 H：<br>成人每日摄取量为 100~200 毫克。（生物素）帮助脂肪酸的形成<br>缺乏的危害：皮肤炎、食欲不振、恶心、贫血、头皮屑多、容易掉发。<br>富含维生素H的食品：猪肝、沙丁鱼、糙米、果仁、未精制的榖类</p><p>17、维生素 K：<br>成人约 65~80 毫克, 建议成人每公斤体重摄取 1 毫克。 </p><p>18、维生素B6：<br>能帮助女性保持脑部、神经、皮肤正常运作、维持神经系统及大脑正常功能的作用<br>缺乏的危害：恶心、情绪低落、皮肤炎。<br>富含维生素B6的食品：肉类、鱼类、蔬菜类、酵母、麦芽、肝 </p><h4 id="3-矿物质类"><a href="#3-矿物质类" class="headerlink" title="3. 矿物质类"></a>3. 矿物质类</h4><p>19、钙 Ca ：<br>青春期到 25 岁，男性每日应摄取 800 毫克，女性则为700毫克；到 25 岁以上，建议每日摄取量应达 600 毫克。孕妇或授乳中女性，每日所需钙质皆为 1000 毫克。为构成骨骼和牙齿的主要成分.<br>缺乏的危害：导致骨质密度降低、骨质疏松、骨骼变形、骨折。<br>富含钙 Ca的食品：奶类、深绿色蔬菜、豆类、</p><p>20、磷 P：<br>成人每日摄取量为 600 毫克。钙摄取不足时，就会发生骨质流失问题。<br>缺乏的危害：骨骼、发育不良、关节炎、肥胖、神经过敏、疲劳、食欲不振。<br>富含磷的食品：家禽类、鱼类、肉类、干果、牛奶、米糠、胚芽 </p><p>21、钾 K：<br>成人每日摄取量为 2,000 毫克。心跳正常规律、可预防中风。<br>缺乏的危害：高血压、容易中暑、疲劳。（爱喝咖啡、酒及嗜吃甜食者易缺乏。）富含钾的食品：柿干、蔬菜、 </p><p>22、镁 Mg：<br>成年男性每日摄取量为 360 毫克，女性为 315 毫克。为构成骨骼及牙齿之主要成分<br>缺乏的危害：缺乏镁会使神经受到干扰，长期服用利尿药或量饮酒时，容易缺乏镁<br>富含镁的食品：蔬菜、鱼肉、香蕉、五谷类、瘦肉、奶类、豆荚。 </p><p>23、钠 Na：<br>成人每日摄取量为 2~4 克。有助血压、神经、肌肉的正常运作。<br>缺乏的危害：缺乏钠会引致昏睡、低血糖、心悸等症状、血压高。<br>富含钠的食品：奶类、蛋类、肉类奶制品、 </p><p>24、氯 Cl：<br>每日营养素建议摄取量，RDNA &gt; 200 毫克/每日。一般人每日食盐的摄取量应低于 8~10 克。<br>缺乏的危害：钾、钠、氯三元素缺乏任何一种时，可使人生长停滞。<br>富含氯的食品：盐、海藻、麦粉、橄榄、奶类、肉类、 </p><p>25、硫 S：<br>每日营养素建议摄取量，RDNA &gt; 200 毫克/每日。为构成毛发、软骨、胰岛素等之必需成分。<br>缺乏的危害：浮肿、生长发育迟缓、心跳减慢、食欲不振。<br>富含硫的食品：蛋类、奶类、瘦肉类、豆荚类、坚果类 </p><p>26、铁 Fe：<br>成年男性每日摄取量为 10 毫克，女性为 15 毫克。 血液的主要成份，制造血红蛋白。对孩童成长及抵抗疾病亦非常重要，防止贫血<br>缺乏的危害：贫血、疲倦、抵抗力降低、发育不良等。<br>富含铁的食品：肝及内脏类、蛋黄、牛奶、瘦肉、贝类、海藻类、豆类、 </p><p>27、铜 Cu：<br>成人每日摄取量为 1.6~3 毫克。结合铁及血红蛋白，改善贫血。<br>缺乏的危害：会影响骨骼间的缔结组织、贫血。<br>富含铜的食品：肝脏、牡蛎、芝麻、瘦肉、坚果类 </p><p>28、碘 I：<br>成人每日摄取量为 90~140 微克。<br>甲状腺球蛋白的主要成分，降低血中胆固醇值、促进体脂肪燃烧、帮助减肥。<br>缺乏的危害：甲状腺肿大、肥胖、影响儿童发育。<br>富含碘的食品：海藻、海产类、肉类、蛋、奶类、五谷类、绿叶蔬菜 </p><p>29、锰 Mn ：<br>成人每日摄取量为 3.5~4 毫克。<br>缺乏的危害：影响骨骼形成、降低性荷尔蒙的合成及怀孕能力、性功能衰退。<br>富含锰的食品：糠皮、坚果、豆荚类、莴苣、菠萝。 </p><p>30、锌 Zn：<br>成年男性每日摄取量为 15 毫克，女性为 12 毫克。<br>帮助新皮肤生长、细胞再生、强化免疫力。又称为壮阳矿物质，对前列腺的功能、生殖器官的发育有帮助<br>缺乏的危害：发育不全、前列腺异常、妨碍RNA、DAN的生成、性交能力衰退<br>富含锌的食品：海产、牛肉、羊肉、蛋、鱼、未精制谷物类、坚果 </p><p>31、钴 Co ：<br>只需在日常饮食中含有微量便可，人体必须的微量矿物质，<br>缺乏的危害：贫血、恶心、牙龈出血、食欲不振、体重减轻<br>富含钴的食品：绿叶蔬菜、动物肝、肾脏、荞麦</p><p>32、钼 Mo：<br>成人每日摄取量为 25~30 微克。<br>缺乏的危害：不孕症、疲劳、性无能<br>富含钼的食品：大豆、蔬菜、白菜</p><p>33、氟 F：<br>每日摄取 20 毫克以上。构成骨骼和牙齿的重要成份。能够强化牙齿的珐琅质，对预防蛀牙方面很有效。<br>缺乏的危害：贫血、成长发育不良、生殖能力衰弱。使牙齿失去光泽<br>富含氟的食品：杏仁、茶叶、苹果、牛奶、鸡蛋、蜂蜜、麦芽、日常的饮用水、菠菜。 </p><p>34、铬 Cr ：<br>成年男性每日摄取量为 30~35 微克，女性为 20~25 微克。活化胰岛素，号称减肥矿物质。在糖尿病及低血糖患者体内，<br>缺乏的危害：醣类无法顺利代谢、严重可能引起糖尿病、动脉硬化。<br>富含铬的食品：谷类、豆类、肉类、坚果</p><p>35、硒 Se ：<br>成人每日摄取量为 50 微克，摄取上限是 400 微克。<br>独立或与维他命E配合，成为有效的抗氧代剂、保持年轻，帮助治疗女性更年期热潮红，与毛发的生长有关。<br>缺乏的危害：缺乏硒会使人体衰老，严重缺乏甚至会导致心肌毛病如心肌衰竭。<br>富含硒的食品：竹筴鱼、肉类、蔬菜、米糠、南瓜 </p><h5 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h5><ol><li><p>一般成人根据体重及活动量来看，女性一天约需要 1500~1800kcal(大卡)，男性约需 2000-2300kcal， </p></li><li><p>胺基酸是构成蛋白质的物质，人体内约有 22 种胺基酸，9 种称为「必需胺基酸」 </p></li><li><p>维生素分水溶性：维生素 B 群及维生素 C；脂溶性：维生素 A、D、E 及 K。水溶性维生素易在烹调过程遭破坏。</p></li><li><p>所谓的国际单位(I.U.)是评估维生素 A、D 两种营养素含量的计量单位</p></li></ol><h4 id="4-氨基酸类"><a href="#4-氨基酸类" class="headerlink" title="4. 氨基酸类"></a>4. 氨基酸类</h4><p>36、异亮氨酸；能维持机体平衡，治疗精神障碍 </p><p>37、亮氨酸；如果缺乏时，会停止生长，体重减轻 </p><p>38、赖氨酸；增强免疫能力，改善发育,促进骨骼生长。</p><p>39、蛋氨酸；提高肌肉活力的功能 。</p><p>40、苯丙氨酸:促进甲状腺素和肾和肾上腺素的合成 </p><p>41、苏氨酸: 人体必需，缺乏时会使人消瘦，甚至死亡 </p><p>42、色氨酸:促进血红蛋白的合成. </p><p>43、缬氨酸；促使神经系统功能正常. </p><p>注：以上氨基酸为体内不可合成又必须的氨基酸，长期缺乏会导致死亡，氨基酸相互作用、缺一不可，缺乏任何一种都会导致其它氨基酸也无法发挥作用。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;适应人群&quot;&gt;&lt;a href=&quot;#适应人群&quot; class=&quot;headerlink&quot; title=&quot;适应人群&quot;&gt;&lt;/a&gt;适应人群&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;适合人群：18-55岁健康人群&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;每日必须&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="探索" scheme="https://a-little-sweet.github.io/tags/%E6%8E%A2%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>货源渠道</title>
     <link href="https://a-little-sweet.github.io/posts/3024c976.html"/>
     <id>https://a-little-sweet.github.io/posts/3024c976.html</id>
     <published>2022-12-08T05:37:22.000Z</published>
-    <updated>2022-12-08T14:48:45.219Z</updated>
+    <updated>2023-04-03T12:39:01.524Z</updated>
     
     <content type="html"><![CDATA[<h3 id="垂直式电商网站"><a href="#垂直式电商网站" class="headerlink" title="垂直式电商网站"></a>垂直式电商网站</h3><blockquote><p>产品统一管理，根据需求进行展示，如出现产品问题可以全部下架，灵活高效，保证客户对产品的评分不低于规定；</p><p>垂直式电商网站:供应商提供低库存风险、低成本、高效率的渠道，进行品牌推广，市场调研；通过对客户行为分析，消费能力水平的评估，为供应商提供数据支持，一起解决库存问题；</p><p>同类产品，商品价格透明，物流简便，品质有保障；过供应商和物流渠道资源整合，专业的垂直电商网站的品质服务和产品保障. </p><p>深挖供应链，注重精细化运营是垂直电商的优势，对供应链的完善和独特的产品服务，达到与综合电商差异化的效果；品牌是一个长年累月的过程，每个环节要不断优化，把事情做到最细，带来更好的用户体验和最大的效益；要非常关注用户的转化率、留存率和粘性，越来越多的自然流量才会避免高成本的怪圈。</p><p><strong>排名前十的垂直电商网站</strong></p><p><strong>1． 阿芙精油</strong><br>阿芙精油是成立于2009年的化妆品电商，每年有几个亿的销售，他坚持少而精的订单数，专注于品牌的建立，把一个小商品做到极致；</p><p><strong>2． 春水堂</strong><br>春水堂是成立于2003年的情趣用口店，他弱化了性的色彩，讲究设计、美感，更像是个玩具，开辟了上千亿的市场；</p><p><strong>3． 酒仙网</strong><br>酒仙网是成立于2009年的酒类电商网站，在每年规模高达上万亿的酒类市场，酒仙网将资源整合到线上渠道，把酒卖的更好；</p><p><strong>4． 裂帛</strong><br>裂帛是成立于2006年的女装电商，创始人将最文艺、最有范的女装与其他品牌区别开来，在2018年的“双11”当中，品牌销售过亿，成为当日销售冠军；</p><p><strong>5． 钻石小鸟</strong><br>钻石小鸟是成立于2002年的珠宝电商，他不仅懂得品牌营销，还有能力把握整个供应链，与国际大牌设计合作，推出有自身特色的钻石产品；</p><p><strong>6． 本来生活</strong><br>本来生活是成立于2018年的生鲜电商，他根据用户的需求点，推出的“禇橙”取得了轰动效应，带动了本来生活的流量；</p><p><strong>7． Roseonly</strong><br>Roseonly是成立于2018年的鲜花电商，出于一种专爱的概念，需要自己把名字和收花人的名字绑定，一辈子只能送给一个人，不能更改，今年营收将达到几千万；</p><p><strong>8． 哇塞网</strong><br>哇塞网是成立于2008年的手工艺品电商，其定位是创意生活服务，是国内最大的手工原创产品、艺术品在线市场，满足了高要求、追求品质生活的人群；</p><p><strong>9． 贡天下</strong><br>贡天下是成立于2018年的特产电商，专注于全天下特产，每个地方开设分馆之后，把当地特产放到线上售卖，成为中国最大的特产网购商城；</p><p><strong>10. 蛋生网</strong><br>蛋生网是成立于2018年的母婴纺织品电商，主打有机棉天然材质的服装，采用向上游供应商定制产品的模式，提高供应链的效率，节约成本，销售已经接近千万。</p></blockquote><h3 id="供货渠道"><a href="#供货渠道" class="headerlink" title="供货渠道"></a>供货渠道</h3><h4 id="衣服批发"><a href="#衣服批发" class="headerlink" title="衣服批发"></a>衣服批发</h4><blockquote><ol><li>织里童装网(童装批发)</li><li>搜款网(女装批发)</li><li>货捕头(女装批发)</li><li>生意网(童装批发)</li><li>四季星座(男装,女装)</li><li>网商园(男装批发)</li><li>酷有拿货网(服装批发)</li><li>衣联网(服装档口)</li><li>批批网(服装批发)</li><li>杭州女装网(女装,男装,童装,鞋批发)</li><li>搜鞋网(鞋子批发)</li><li>53货源网(服装鞋包)</li><li>爱买卖(女鞋批发)</li><li>新款网(女鞋批发)</li><li>开山网(鞋子批发)</li></ol></blockquote><h4 id="化妆品"><a href="#化妆品" class="headerlink" title="化妆品"></a>化妆品</h4><blockquote><ol><li>个秀名妆</li><li>优分销</li></ol></blockquote><h4 id="母婴"><a href="#母婴" class="headerlink" title="母婴"></a>母婴</h4><blockquote><ol><li>挚爱母婴网</li></ol></blockquote><h4 id="珠宝"><a href="#珠宝" class="headerlink" title="珠宝"></a>珠宝</h4><blockquote><ol><li>批发户(珠宝饰品)</li></ol></blockquote><h4 id="食品"><a href="#食品" class="headerlink" title="食品"></a>食品</h4><blockquote><ol><li>58食品网</li></ol></blockquote><h4 id="其他产品"><a href="#其他产品" class="headerlink" title="其他产品"></a>其他产品</h4><blockquote><ol><li>义务小商品城(各类小东西)</li><li>多商网(全品类)</li><li>包牛牛(箱包批发)</li><li>众人店(特产批发)</li><li>北极光(跨境电商各类产品)</li><li>工邦邦(工业用品批发)</li><li>马可波罗网(机械,五金批发)</li><li>货源之家(各类批发)</li><li>工业汇(工业产品批发)</li><li>美乐乐(家具批发)</li></ol></blockquote><p>​                                                                                                                                                                                                                                                                                                                                               </p>]]></content>
     
@@ -411,29 +436,6 @@
     <summary type="html">&lt;h3 id=&quot;作用域&quot;&gt;&lt;a href=&quot;#作用域&quot; class=&quot;headerlink&quot; title=&quot;作用域&quot;&gt;&lt;/a&gt;作用域&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;在java中,主要变量就是成员变量和局部变量&lt;/li&gt;
 &lt;li&gt;一般&lt;strong&gt;局部变量&lt;/strong&gt;指的是成员</summary>
-      
-    
-    
-    
-    
-    <category term="Java" scheme="https://a-little-sweet.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>运算符优先级</title>
-    <link href="https://a-little-sweet.github.io/posts/9393c5c.html"/>
-    <id>https://a-little-sweet.github.io/posts/9393c5c.html</id>
-    <published>2022-11-11T22:41:36.132Z</published>
-    <updated>2022-11-22T15:08:38.032Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3><p>注意：只有单目运算符、赋值运算符是从右往左运算的。</p><p>运算等级：  <code>（）&#123;&#125;</code>   &gt;  算数运算符 &gt; 位移运算符 &gt; 比较运算符 &gt; 逻辑运算符 &gt; 三元运算符&gt; 赋值运算符</p><div class="table-container"><table><thead><tr><th style="text-align:left"></th><th style="text-align:left">. ()   {}   ;  ,</th></tr></thead><tbody><tr><td style="text-align:left">R—&gt;L</td><td style="text-align:left">++  —-  ~  !(data type)</td></tr><tr><td style="text-align:left">L—&gt;R</td><td style="text-align:left">*  /  %</td></tr><tr><td style="text-align:left">L—&gt;R</td><td style="text-align:left">+  -</td></tr><tr><td style="text-align:left">L—&gt;R</td><td style="text-align:left">&gt;&gt;  &lt;&lt;  &gt;&gt;&gt;  位移</td></tr><tr><td style="text-align:left">L—&gt;R</td><td style="text-align:left">&lt;    &gt;    &lt;=   &gt;=    instanceof</td></tr><tr><td style="text-align:left">L—&gt;R</td><td style="text-align:left">==     !=</td></tr><tr><td style="text-align:left">L—&gt;R</td><td style="text-align:left">&amp;</td></tr><tr><td style="text-align:left">L—&gt;R</td><td style="text-align:left">^</td></tr><tr><td style="text-align:left">L—&gt;R</td><td style="text-align:left">\</td><td></td></tr><tr><td style="text-align:left">L—&gt;R</td><td style="text-align:left">&amp;&amp;</td></tr><tr><td style="text-align:left">L—&gt;R</td><td style="text-align:left">\</td><td>\</td><td></td></tr><tr><td style="text-align:left">L—&gt;R</td><td style="text-align:left">？ ：</td></tr><tr><td style="text-align:left">R—&gt;L</td><td style="text-align:left">=  *=  /=  %=</td></tr><tr><td style="text-align:left"></td><td style="text-align:left">+=   -=   &lt;&lt;=  &gt;&gt;=</td></tr><tr><td style="text-align:left"></td><td style="text-align:left">&gt;&gt;&gt;=   &amp;=   ^=    \</td><td>=</td></tr></tbody></table></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;运算符优先级&quot;&gt;&lt;a href=&quot;#运算符优先级&quot; class=&quot;headerlink&quot; title=&quot;运算符优先级&quot;&gt;&lt;/a&gt;运算符优先级&lt;/h3&gt;&lt;p&gt;注意：只有单目运算符、赋值运算符是从右往左运算的。&lt;/p&gt;
-&lt;p&gt;运算等级：  &lt;code&gt;（）&amp;#123;</summary>
       
     
     
